@@ -11,5 +11,11 @@ public class Entity {
 	public void Setup() {
 		AddBehaviour(transfrom);
 		transfrom.entity = this;
+
+		Enter();
+	}
+
+	public virtual void Enter() {
+		// Users entry function
 	}
 }
