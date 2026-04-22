@@ -39,10 +39,12 @@
     <Compile Include="Core\Math\Vector2.cs" />
     <Compile Include="Engine\Components\Behaviour.cs" />
     <Compile Include="Engine\Components\Core\Transform.cs" />
+    <Compile Include="Engine\Components\Script.cs" />
     <Compile Include="Engine\Engine\Instantiator.cs" />
     <Compile Include="Engine\Objects\Entity.cs" />
     <Compile Include="Engine\Program.cs" />
-    <Compile Include="Examples\Player.cs" />
+    <Compile Include="Examples\PlayerEntity.cs" />
+    <Compile Include="Examples\PlayerScripts\PlayerDebug.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
