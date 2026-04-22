@@ -12,10 +12,12 @@ public class Entity {
 		AddBehaviour(transfrom);
 		transfrom.entity = this;
 
-		Enter();
+		LaunchBehaviours();
 	}
 
-	public virtual void Enter() {
-		// Users entry function
+	private void LaunchBehaviours() {
+		for(int i = 0; i < behaviours.Count; i++) {
+			behaviours[i].Enter();
+		}
 	}
 }

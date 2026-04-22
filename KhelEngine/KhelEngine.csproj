@@ -35,5 +35,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Math\Vector2.cs" />
+    <Compile Include="Engine\Components\Behaviour.cs" />
+    <Compile Include="Engine\Components\Core\Transform.cs" />
+    <Compile Include="Engine\Engine\Instantiator.cs" />
+    <Compile Include="Engine\Objects\Entity.cs" />
+    <Compile Include="Engine\Program.cs" />
+    <Compile Include="Examples\Player.cs" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
