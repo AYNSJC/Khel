@@ -11,7 +11,10 @@ public static class Engine {
 
 	public static void UpdateGame() {
 		EngineLoopManager.UpdateAllEntityLoops();
+		RunFixedLoop();
+	}
 
+	private static void RunFixedLoop() {
 		long currentTime = stopwatch.ElapsedMilliseconds;
 		deltaTime = (currentTime - lastElapsedTime) / 1000f;
 		lastElapsedTime = currentTime;
