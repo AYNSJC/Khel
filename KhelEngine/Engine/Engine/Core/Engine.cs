@@ -11,6 +11,7 @@ public static class Engine {
 
 	public static void UpdateGame() {
 		EngineLoopManager.UpdateAllEntityLoops();
+		Input.Update();
 		RunFixedLoop();
 	}
 
