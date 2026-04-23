@@ -1,11 +1,11 @@
 ﻿namespace KhelEngine.Core.Math {
 	public struct Vector2 {
-		public float X;
-		public float Y;
+		public float x;
+		public float y;
 
 		public Vector2(float x, float y) {
-			X = x;
-			Y = y;
+			this.x = x;
+			this.y = y;
 		}
 
 		public static Vector2 Zero => new Vector2(0, 0);

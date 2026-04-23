@@ -34,4 +34,9 @@ public class Entity {
 			scripts[i].entity = this;
 		}
 	}
+
+	public void AddScript(Script script) {
+		scripts.Add(script);
+		AssignScripts();
+	}
 }

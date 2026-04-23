@@ -1,9 +1,9 @@
-﻿using System;
-
-public class PlayerEntity : Entity {
+﻿public class PlayerEntity : Entity {
 	public PlayerEntity() {
-		transfrom.position.X = 2f;
+		transfrom.position.x = 2f;
 		transfrom.rotation = 15f;
-		transfrom.scale.Y = 1.25f;
+		transfrom.scale.y = 1.25f;
+
+		AddScript(new PlayerDebug());
 	}
 }
