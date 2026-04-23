@@ -6,6 +6,12 @@ public static class Instantiator {
 	public static T CreateEntity<T>() where T : Entity, new() {
 		T entity = new T();
 		entities.Add(entity);
+		SetUpEntity(entity);
 		return entity;
+	}
+
+	private static void SetUpEntity(Entity entity) {
+		EngineLoopManager.AddEntity(entity);
+		EngineFixedLoopManager.AddEntity(entity);
 	}
 }
