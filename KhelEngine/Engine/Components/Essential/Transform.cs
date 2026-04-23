@@ -1,4 +1,4 @@
-﻿using KhelEngine.Core.Math;
+﻿using KhelEngine.Mathf;
 
 public class Transform : Behaviour {
 	// Transform

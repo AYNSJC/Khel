@@ -1,57 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CDBA4FA3-AA4E-476B-B546-42022160D95B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>KhelEngine</RootNamespace>
-    <AssemblyName>KhelEngine</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
+    <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Core\Math\Vector2.cs" />
-    <Compile Include="Engine\Components\Behaviour.cs" />
-    <Compile Include="Engine\Components\Essential\Transform.cs" />
-    <Compile Include="Engine\Components\Script.cs" />
-    <Compile Include="Engine\Engine\Editor\Engine.cs" />
-    <Compile Include="Engine\Engine\Editor\EngineLoopManager.cs" />
-    <Compile Include="Engine\Engine\Editor\Logger.cs" />
-    <Compile Include="Engine\Engine\Editor\EngineFixedLoopManager.cs" />
-    <Compile Include="Engine\Engine\Instantiator.cs" />
-    <Compile Include="Engine\Objects\Entity.cs" />
-    <Compile Include="Examples\Program.cs" />
-    <Compile Include="Examples\PlayerEntity.cs" />
-    <Compile Include="Examples\PlayerScripts\PlayerDebug.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

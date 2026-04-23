@@ -4,6 +4,6 @@
 		transfrom.rotation = 15f;
 		transfrom.scale.y = 1.25f;
 
-		AddScript(new PlayerDebug());
+		AddScript(new PlayerScript());
 	}
 }
