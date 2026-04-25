@@ -1,4 +1,4 @@
-﻿public enum Key : int {
+﻿public enum WindowsKeyCode : int {
 	// Mouse buttons
 	LEFT_MOUSE_BUTTON = 0x01,
 	RIGHT_MOUSE_BUTTON = 0x02,

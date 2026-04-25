@@ -11,9 +11,6 @@ public class PlayerScript : Script {
 
 	public override void Loop() {
 		GetDirection();
-	}
-
-	public override void FixedLoop() {
 		MovePlayer();
 	}
 
@@ -27,20 +24,22 @@ public class PlayerScript : Script {
 	private void GetDirection() {
 		_direction = Vector2.Zero;
 
-		if(Input.GetKey(Key.W)) {
-			_direction.y = speed;
+		float amount = speed * Engine.deltaTime;
+
+		if(Input.GetKey(WindowsKeyCode.W)) {
+			_direction.y = amount;
 		}
 
-		if(Input.GetKey(Key.S)) {
-			_direction.y = -speed;
+		if(Input.GetKey(WindowsKeyCode.S)) {
+			_direction.y = -amount;
 		}
 
-		if(Input.GetKey(Key.D)) {
-			_direction.x = speed;
+		if(Input.GetKey(WindowsKeyCode.D)) {
+			_direction.x = amount;
 		}
 
-		if(Input.GetKey(Key.A)) {
-			_direction.x = -speed;
+		if(Input.GetKey(WindowsKeyCode.A)) {
+			_direction.x = -amount;
 		}
 	}
 
