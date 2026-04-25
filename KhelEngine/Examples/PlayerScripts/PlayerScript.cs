@@ -1,5 +1,4 @@
-﻿using System;
-using KhelEngine.Mathf;
+﻿using KhelEngine.Mathf;
 
 public class PlayerScript : Script {
 	private float speed = 5f;
@@ -28,19 +27,19 @@ public class PlayerScript : Script {
 	private void GetDirection() {
 		_direction = Vector2.Zero;
 
-		if(Input.GetKey(ConsoleKey.W)) {
+		if(Input.GetKey(Key.W)) {
 			_direction.y = speed;
 		}
 
-		if(Input.GetKey(ConsoleKey.S)) {
+		if(Input.GetKey(Key.S)) {
 			_direction.y = -speed;
 		}
 
-		if(Input.GetKey(ConsoleKey.D)) {
+		if(Input.GetKey(Key.D)) {
 			_direction.x = speed;
 		}
 
-		if(Input.GetKey(ConsoleKey.A)) {
+		if(Input.GetKey(Key.A)) {
 			_direction.x = -speed;
 		}
 	}

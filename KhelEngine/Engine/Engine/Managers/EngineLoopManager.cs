@@ -4,6 +4,8 @@ public static class EngineLoopManager {
 	private static List<Entity> entityList = new List<Entity>();
 
 	public static void UpdateAllEntityLoops() {
+		Input.Update();
+
 		for(int i = 0; i < entityList.Count; i++) {
 			List<Script> entityScriptList = entityList[i].scripts;
 
