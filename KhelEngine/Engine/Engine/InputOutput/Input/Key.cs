@@ -17,7 +17,7 @@
 	CAPS_LOCK = 0x14,
 	ESCAPE = 0x1B,
 
-	// Numpad Keys
+	// Navigation & Editing Keys
 	SPACE = 0x20,
 	PAGE_UP = 0x21,
 	PAGE_DOWN = 0x22,
@@ -75,7 +75,7 @@
 	Y = 0x59,
 	Z = 0x5A,
 
-	// Windows / system
+	// Windows / System
 	LEFT_SUPER_KEY = 0x5B,
 	RIGHT_SUPER_KEY = 0x5C,
 	CONTEXT_MENU = 0x5D,
@@ -98,7 +98,7 @@
 	DECIMAL = 0x6E,
 	DIVIDE = 0x6F,
 
-	// Function keys
+	// Function Keys
 	F1 = 0x70,
 	F2 = 0x71,
 	F3 = 0x72,
@@ -128,7 +128,7 @@
 	NUMLOCK = 0x90,
 	SCROLL = 0x91,
 
-	// Left/right modifiers
+	// Left/Right Modifiers
 	LEFT_SHIFT = 0xA0,
 	RIGHT_SHIFT = 0xA1,
 	LEFT_CONTROL = 0xA2,
@@ -136,16 +136,16 @@
 	LEFT_ALT = 0xA4,
 	RIGHT_ALT = 0xA5,
 
-	// OEM keys
+	// OEM Keys
 	COLON_SEMICOLON = 0xBA,
 	EQUAL_PLUS = 0xBB,
 	COMMA_LESS_THAN = 0xBC,
-	PERIOD_GREATER_THAN = 0xBE,
 	MINUS_UNDERSCORE = 0xBD,
+	PERIOD_GREATER_THAN = 0xBE,
 	FORWARD_SLASH_QUESTION_MARK = 0xBF,
-	BACK_SLASH_PIPE = 0xDC,
 	BACKTICK_SQUIGGLE = 0xC0,
 	SQUARE_CURLY_BRACKET_OPEN = 0xDB,
+	BACK_SLASH_PIPE = 0xDC,
 	SQUARE_CURLY_BRACKET_CLOSE = 0xDD,
 	QUOTES = 0xDE
 }
