@@ -25,6 +25,7 @@ public class Entity {
 
 	private void LaunchScripts() {
 		for(int i = 0; i < scripts.Count; i++) {
+			scripts[i].Setup();
 			scripts[i].Enter();
 		}
 	}

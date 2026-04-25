@@ -3,7 +3,11 @@
 public static class EngineFixedLoopManager {
 	private static List<Entity> entityList = new List<Entity>();
 
-	public static void UpdateAllEntityFixedLoops() {
+	public static void UpdateGame() {
+		UpdateAllEntityFixedLoops();
+	}
+
+	private static void UpdateAllEntityFixedLoops() {
 		for(int i = 0; i < entityList.Count; i++) {
 			List<Script> entityScriptList = entityList[i].scripts;
 

@@ -10,7 +10,7 @@ public static class Engine {
 	public static float deltaTime { get; private set; }
 
 	public static void UpdateGame() {
-		EngineLoopManager.UpdateAllEntityLoops();
+		EngineLoopManager.UpdateGame();
 		RunFixedLoop();
 	}
 
@@ -22,7 +22,7 @@ public static class Engine {
 		fixedTimer += deltaTime;
 
 		while(fixedTimer >= fixedStep) {
-			EngineFixedLoopManager.UpdateAllEntityFixedLoops();
+			EngineFixedLoopManager.UpdateGame();
 			fixedTimer -= fixedStep;
 		}
 	}

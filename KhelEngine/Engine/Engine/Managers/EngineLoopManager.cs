@@ -3,9 +3,16 @@
 public static class EngineLoopManager {
 	private static List<Entity> entityList = new List<Entity>();
 
-	public static void UpdateAllEntityLoops() {
-		Input.Update();
+	public static void UpdateGame() {
+		UpdateInput();
+		UpdateAllEntityLoops();
+	}
 
+	private static void UpdateInput() {
+		Input.Update();
+	}
+
+	private static void UpdateAllEntityLoops() {
 		for(int i = 0; i < entityList.Count; i++) {
 			List<Script> entityScriptList = entityList[i].scripts;
 
