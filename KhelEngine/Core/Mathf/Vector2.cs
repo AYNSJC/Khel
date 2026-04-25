@@ -40,5 +40,16 @@ namespace KhelEngine.Mathf {
 		public float SquareMagnitude() {
 			return (x * x + y * y);
 		}
+
+		public Vector2 Normalize() {
+			float sqMag = SquareMagnitude();
+
+			if(sqMag == 0) {
+				return Vector2.Zero;
+			}
+
+			float mag = 1f / (float)Math.Sqrt(sqMag);
+			return new Vector2(x * mag, y * mag);
+		}
 	}
 }

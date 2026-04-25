@@ -41,6 +41,8 @@ public class PlayerScript : Script {
 		if(Input.GetKey(WindowsKeyCode.A)) {
 			_direction.x = -amount;
 		}
+
+		_direction.Normalize();
 	}
 
 	private void PrintPosition() {
