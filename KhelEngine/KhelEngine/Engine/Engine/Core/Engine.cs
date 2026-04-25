@@ -9,8 +9,15 @@ public static class Engine {
 
 	public static float deltaTime { get; private set; }
 
+	private static OutputWindow window;
+
+	public static void StartGame(IProjectSettings pS) {
+		window = new OutputWindow(pS.Width, pS.Height, pS.ProjectName);
+	}
+
 	public static void UpdateGame() {
-		EngineLoopManager.UpdateGame();
+		window.PollEvents();
+		EngineGameLoopManager.UpdateGame();
 		RunFixedLoop();
 	}
 
@@ -22,7 +29,7 @@ public static class Engine {
 		fixedTimer += deltaTime;
 
 		while(fixedTimer >= fixedStep) {
-			EngineFixedLoopManager.UpdateGame();
+			EngineGameFixedLoopManager.UpdateGame();
 			fixedTimer -= fixedStep;
 		}
 	}

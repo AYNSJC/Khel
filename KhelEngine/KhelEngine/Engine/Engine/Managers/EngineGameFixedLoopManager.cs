@@ -1,23 +1,18 @@
 ﻿using System.Collections.Generic;
 
-public static class EngineLoopManager {
+public static class EngineGameFixedLoopManager {
 	private static List<Entity> entityList = new List<Entity>();
 
 	public static void UpdateGame() {
-		UpdateInput();
-		UpdateAllEntityLoops();
+		UpdateAllEntityFixedLoops();
 	}
 
-	private static void UpdateInput() {
-		Input.Update();
-	}
-
-	private static void UpdateAllEntityLoops() {
+	private static void UpdateAllEntityFixedLoops() {
 		for(int i = 0; i < entityList.Count; i++) {
 			List<Script> entityScriptList = entityList[i].scripts;
 
 			for(int j = 0; j < entityScriptList.Count; j++) {
-				entityScriptList[j].Loop();
+				entityScriptList[j].FixedLoop();
 			}
 		}
 	}

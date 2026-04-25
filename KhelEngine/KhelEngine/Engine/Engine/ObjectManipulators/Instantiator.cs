@@ -12,7 +12,7 @@ public static class Instantiator {
 	}
 
 	private static void SetUpEntity(Entity entity) {
-		EngineLoopManager.AddEntity(entity);
-		EngineFixedLoopManager.AddEntity(entity);
+		EngineGameLoopManager.AddEntity(entity);
+		EngineGameFixedLoopManager.AddEntity(entity);
 	}
 }
