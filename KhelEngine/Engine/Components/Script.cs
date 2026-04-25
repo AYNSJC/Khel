@@ -4,5 +4,4 @@
 	public virtual void Enter() { }
 	public virtual void Loop() { }
 	public virtual void FixedLoop() { }
-	public virtual void Exit() { }
 }

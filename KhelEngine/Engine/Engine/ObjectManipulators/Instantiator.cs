@@ -7,6 +7,7 @@ public static class Instantiator {
 		T entity = new T();
 		entities.Add(entity);
 		SetUpEntity(entity);
+		entity.Setup();
 		return entity;
 	}
 

@@ -1,8 +1,7 @@
 ﻿class Program {
 	static void Main(string[] args) { 
 		// All objects go through this: 
-		PlayerEntity player = Instantiator.CreateEntity<PlayerEntity>();
-		player.Setup();
+		Instantiator.CreateEntity<PlayerEntity>();
 
 		// Update Game: 
 		while(true) {
