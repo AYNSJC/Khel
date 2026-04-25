@@ -2,29 +2,29 @@
 using System.Collections.Generic;
 
 public static class Input {
-	private static HashSet<WindowsKeyCode> currentKeys = new HashSet<WindowsKeyCode>();
-	private static HashSet<WindowsKeyCode> previousKeys = new HashSet<WindowsKeyCode>();
+	private static HashSet<KeyCode> currentKeys = new HashSet<KeyCode>();
+	private static HashSet<KeyCode> previousKeys = new HashSet<KeyCode>();
 
 	public static void Update() {
-		previousKeys = new HashSet<WindowsKeyCode>(currentKeys);
+		previousKeys = new HashSet<KeyCode>(currentKeys);
 		currentKeys.Clear();
 
-		foreach(WindowsKeyCode key in Enum.GetValues(typeof(WindowsKeyCode))) { 
+		foreach(KeyCode key in Enum.GetValues(typeof(KeyCode))) { 
 			if(InputBackend.IsKeyPressed(key)) {
 				currentKeys.Add(key);
 			}
 		}
 	}
 
-	public static bool GetKey(WindowsKeyCode key) { 
+	public static bool GetKey(KeyCode key) { 
 		return currentKeys.Contains(key);
 	}
 
-	public static bool GetKeyDown(WindowsKeyCode key) {
+	public static bool GetKeyDown(KeyCode key) {
 		return currentKeys.Contains(key) && !previousKeys.Contains(key);
 	}
 
-	public static bool GetKeyUp(WindowsKeyCode key) {
+	public static bool GetKeyUp(KeyCode key) {
 		return !currentKeys.Contains(key) && previousKeys.Contains(key);
 	}
 }
