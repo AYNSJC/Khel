@@ -33,6 +33,10 @@ namespace KhelEngine.Mathf {
 			return new Vector2(a.x / b, a.y / b);
 		}
 
+		public override string ToString() {
+			return "(" + x + ", " + y + ")";
+		}
+
 		public float Magnitude() {
 			return (float)Math.Sqrt(x * x + y * y);
 		}
