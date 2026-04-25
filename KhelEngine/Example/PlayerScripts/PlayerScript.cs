@@ -44,6 +44,6 @@ public class PlayerScript : Script {
 	}
 
 	private void PrintPosition() {
-		Logger.Log("Player's Position: " + entity.transfrom.position.ToString())
+		Logger.Log("Player's Position: " + entity.transfrom.position.ToString());
 	}
 }
