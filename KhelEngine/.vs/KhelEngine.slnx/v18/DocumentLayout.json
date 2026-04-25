@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Files\\Projects\\Code\\C#\\Khel\\Khel\\KhelEngine\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\files\\projects\\code\\c#\\khel\\khel\\khelengine\\example\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:example\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\files\\projects\\code\\c#\\khel\\khel\\khelengine\\example\\playerscripts\\playerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:example\\playerscripts\\playerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\files\\projects\\code\\c#\\khel\\khel\\khelengine\\khelengine\\engine\\engine\\objectmanipulators\\instantiator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:khelengine\\engine\\engine\\objectmanipulators\\instantiator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\files\\projects\\code\\c#\\khel\\khel\\khelengine\\example\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:example\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\files\\projects\\code\\c#\\khel\\khel\\khelengine\\khelengine\\engine\\engine\\core\\engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -90,7 +90,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -122,20 +122,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PlayerScript.cs",
               "DocumentMoniker": "D:\\Files\\Projects\\Code\\C#\\Khel\\Khel\\KhelEngine\\Example\\PlayerScripts\\PlayerScript.cs",
               "RelativeDocumentMoniker": "Example\\PlayerScripts\\PlayerScript.cs",
               "ToolTip": "D:\\Files\\Projects\\Code\\C#\\Khel\\Khel\\KhelEngine\\Example\\PlayerScripts\\PlayerScript.cs",
               "RelativeToolTip": "Example\\PlayerScripts\\PlayerScript.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAkwC8AAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-25T15:04:31.932Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Files\\Projects\\Code\\C#\\Khel\\Khel\\KhelEngine\\Example\\Program.cs",
               "RelativeDocumentMoniker": "Example\\Program.cs",
@@ -277,7 +277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Logger.cs",
               "DocumentMoniker": "D:\\Files\\Projects\\Code\\C#\\Khel\\Khel\\KhelEngine\\KhelEngine\\Engine\\Engine\\Editor\\Logger.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Engine\\Editor\\Logger.cs",
@@ -290,7 +290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Instantiator.cs",
               "DocumentMoniker": "D:\\Files\\Projects\\Code\\C#\\Khel\\Khel\\KhelEngine\\KhelEngine\\Engine\\Engine\\ObjectManipulators\\Instantiator.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Engine\\ObjectManipulators\\Instantiator.cs",
@@ -328,7 +328,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Vector2.cs",
               "DocumentMoniker": "D:\\Files\\Projects\\Code\\C#\\Khel\\Khel\\KhelEngine\\KhelEngine\\Core\\Mathf\\Vector2.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Core\\Mathf\\Vector2.cs",
