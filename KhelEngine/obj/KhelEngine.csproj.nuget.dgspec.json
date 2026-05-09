@@ -51,6 +51,12 @@
         "net8.0": {
           "framework": "net8.0",
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Silk.NET.OpenGL": {
+              "target": "Package",
+              "version": "[2.23.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -1,9 +1,20 @@
-﻿using System;
+﻿using Silk.NET.Core.Contexts;
+using System;
 using System.Runtime.InteropServices;
 
 public class OutputWindow {
 	// Handle to the actual native window (HWND in Win32)
 	private IntPtr _hwnd;
+
+	private IntPtr _hdc;
+	private IntPtr _glContext;
+
+	private const uint PFD_DRAW_TO_WINDOW = 0x00000004;
+	private const uint PFD_SUPPORT_OPENGL = 0x00000020;
+	private const uint PFD_DOUBLEBUFFER = 0x00000001;
+
+	private const byte PFD_TYPE_RGBA = 0;
+	private const sbyte PFD_MAIN_PLANE = 0;
 
 	private bool _running = true;
 	private const int WS_OVERLAPPEDWINDOW = 0x00CF0000;
@@ -61,6 +72,66 @@ public class OutputWindow {
 
 		RegisterClass(ref wc);
 	}
+
+	private void CreateOpenGLContext() {
+		// Get drawing surface from window
+		_hdc = GetDC(_hwnd);
+
+		PIXELFORMATDESCRIPTOR pfd = new PIXELFORMATDESCRIPTOR();
+
+		pfd.nSize = (ushort)Marshal.SizeOf<PIXELFORMATDESCRIPTOR>();
+		pfd.nVersion = 1;
+
+		// Tell Windows we want:
+		// - OpenGL support
+		// - drawing to a window
+		// - double buffering
+		pfd.dwFlags =
+			PFD_DRAW_TO_WINDOW |
+			PFD_SUPPORT_OPENGL |
+			PFD_DOUBLEBUFFER;
+
+		// RGBA color mode
+		pfd.iPixelType = PFD_TYPE_RGBA;
+
+		// 32-bit color buffer
+		pfd.cColorBits = 32;
+
+		// 24-bit depth buffer
+		pfd.cDepthBits = 24;
+
+		// Main drawing layer
+		pfd.iLayerType = PFD_MAIN_PLANE;
+
+		// Ask Windows for best pixel format
+		int pixelFormat = ChoosePixelFormat(_hdc, ref pfd);
+
+		// Apply pixel format to window
+		SetPixelFormat(_hdc, pixelFormat, ref pfd);
+
+		// Create OpenGL context
+		_glContext = wglCreateContext(_hdc);
+
+		// Activate OpenGL context
+		wglMakeCurrent(_hdc, _glContext);
+	}
+
+	#region OpenGL
+	[DllImport("user32.dll")]
+	static extern IntPtr GetDC(IntPtr hWnd);
+
+	[DllImport("gdi32.dll")]
+	static extern int SetPixelFormat(IntPtr hdc, int format, ref PIXELFORMATDESCRIPTOR pfd);
+
+	[DllImport("gdi32.dll")]
+	static extern int ChoosePixelFormat(IntPtr hdc, ref PIXELFORMATDESCRIPTOR pfd);
+
+	[DllImport("opengl32.dll")]
+	static extern IntPtr wglCreateContext(IntPtr hdc);
+
+	[DllImport("opengl32.dll")]
+	static extern bool wglMakeCurrent(IntPtr hdc, IntPtr hglrc);
+	#endregion
 
 	#region Win32 Interop
 	[StructLayout(LayoutKind.Sequential)]

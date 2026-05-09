@@ -14,3 +14,14 @@ D:\Files\Projects\Code\C#\Khel\Khel\KhelEngine\obj\Debug\net8.0\refint\KhelEngin
 D:\Files\Projects\Code\C#\Khel\Khel\KhelEngine\obj\Debug\net8.0\KhelEngine.pdb
 D:\Files\Projects\Code\C#\Khel\Khel\KhelEngine\obj\Debug\net8.0\KhelEngine.genruntimeconfig.cache
 D:\Files\Projects\Code\C#\Khel\Khel\KhelEngine\obj\Debug\net8.0\ref\KhelEngine.dll
+D:\Files\Projects\Code\C#\Khel\Khel\KhelEngine\bin\Debug\net8.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Files\Projects\Code\C#\Khel\Khel\KhelEngine\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\Files\Projects\Code\C#\Khel\Khel\KhelEngine\bin\Debug\net8.0\Silk.NET.Core.dll
+D:\Files\Projects\Code\C#\Khel\Khel\KhelEngine\bin\Debug\net8.0\Silk.NET.Maths.dll
+D:\Files\Projects\Code\C#\Khel\Khel\KhelEngine\bin\Debug\net8.0\Silk.NET.OpenGL.dll
+D:\Files\Projects\Code\C#\Khel\Khel\KhelEngine\bin\Debug\net8.0\System.IO.Pipelines.dll
+D:\Files\Projects\Code\C#\Khel\Khel\KhelEngine\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+D:\Files\Projects\Code\C#\Khel\Khel\KhelEngine\bin\Debug\net8.0\System.Text.Json.dll
+D:\Files\Projects\Code\C#\Khel\Khel\KhelEngine\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+D:\Files\Projects\Code\C#\Khel\Khel\KhelEngine\obj\Debug\net8.0\KhelEngine.csproj.AssemblyReference.cache
+D:\Files\Projects\Code\C#\Khel\Khel\KhelEngine\obj\Debug\net8.0\KhelEngine.csproj.Up2Date
