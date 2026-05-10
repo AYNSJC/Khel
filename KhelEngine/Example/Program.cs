@@ -4,7 +4,7 @@
 		Engine.StartGame(new ExampleProjectSettings());
 
 		// Load Scene
-		SceneManager.LoadScene(new DemoScene());
+		SceneManager.LoadScene(0);
 
 		// Update Game: 
 		while(true) {

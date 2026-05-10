@@ -1,13 +1,17 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 public static class SceneManager {
 	private static List<Scene> scenes = new List<Scene>();
 
-	public static Scene LoadScene(Scene scene) {
-		scene.isActive = true;
-		scene.Setup();
-		DisableScenesExcept(scene);
-		return scene;
+	public static Action<Scene> SceneChanged;
+
+	public static Scene LoadScene(int index) {
+		scenes[index].isActive = true;
+		scenes[index].Setup();
+		SceneChanged?.Invoke(scenes[index]);
+		DisableScenesExcept(scenes[index]);
+		return scenes[index];
 	}
 
 	private static void DisableScenesExcept(Scene scene) {
@@ -18,5 +22,9 @@ public static class SceneManager {
 				}
 			}
 		}
+	}
+
+	public static void UpdateSceneList(List<Scene> scenesPS) {
+		scenes = scenesPS;
 	}
 }

@@ -11,8 +11,13 @@ public static class Engine {
 
 	private static OutputWindow window;
 
+	private static Scene activeScene;
+
 	public static void StartGame(IProjectSettings pS) {
 		window = new OutputWindow(pS.Width, pS.Height, pS.ProjectName);
+
+		SceneManager.UpdateSceneList(pS.workingScenes);
+		SceneManager.SceneChanged += ChangeActiveScene;
 	}
 
 	public static void UpdateGame() {
@@ -33,5 +38,12 @@ public static class Engine {
 			EngineGameFixedLoopManager.UpdateGame();
 			fixedTimer -= fixedStep;
 		}
+	}
+
+	private static void ChangeActiveScene(Scene scene) {
+		activeScene = scene;
+
+		EngineGameLoopManager.RefreshEntities(scene.entities);
+		EngineGameFixedLoopManager.RefreshEntities(scene.entities);
 	}
 }

@@ -20,4 +20,8 @@ public static class EngineGameFixedLoopManager {
 	public static void AddEntity(Entity entity) {
 		entityList.Add(entity);
 	}
+
+	public static void RefreshEntities(List<Entity> entities) {
+		entityList = entities;
+	}
 }
