@@ -17,6 +17,7 @@ public static class Engine {
 
 	public static void UpdateGame() {
 		window.PollEvents();
+		window.Render();
 		EngineGameLoopManager.UpdateGame();
 		RunFixedLoop();
 	}

@@ -1,4 +1,4 @@
-﻿using Silk.NET.Core.Contexts;
+﻿using Silk.NET.OpenGL;
 using System;
 using System.Runtime.InteropServices;
 
@@ -25,8 +25,25 @@ public class OutputWindow {
 	private static WndProc _wndProcDelegate = WindowProc;
 	private delegate IntPtr WndProc(IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam);
 
+	[DllImport("opengl32.dll")]
+	static extern IntPtr wglGetProcAddress(string name);
+
+	[DllImport("kernel32.dll")]
+	static extern IntPtr LoadLibrary(string lpFileName);
+
+	[DllImport("kernel32.dll")]
+	static extern IntPtr GetProcAddress(
+		IntPtr hModule,
+		string procName);
+
+	[DllImport("gdi32.dll")]
+	static extern bool SwapBuffers(IntPtr hdc);
+
 	public bool IsRunning => _running;
 
+	private GL _gl;
+
+	
 	public OutputWindow(int width, int height, string title) {
 		RegisterWindowClass();
 
@@ -34,6 +51,8 @@ public class OutputWindow {
 
 		ShowWindow(_hwnd, 1);
 		UpdateWindow(_hwnd);
+
+		CreateOpenGLContext();
 	}
 
 	public void PollEvents() {
@@ -73,7 +92,7 @@ public class OutputWindow {
 		RegisterClass(ref wc);
 	}
 
-	private void CreateOpenGLContext() {
+	public void CreateOpenGLContext() {
 		// Get drawing surface from window
 		_hdc = GetDC(_hwnd);
 
@@ -114,6 +133,27 @@ public class OutputWindow {
 
 		// Activate OpenGL context
 		wglMakeCurrent(_hdc, _glContext);
+
+		_gl = GL.GetApi(name =>
+		{
+			IntPtr proc = wglGetProcAddress(name);
+
+			if(proc == IntPtr.Zero) {
+				IntPtr module = LoadLibrary("opengl32.dll");
+
+				proc = GetProcAddress(module, name);
+			}
+
+			return proc;
+		});
+	}
+
+	public void Render() {
+		_gl.ClearColor(0f, 1f, 1f, 1f);
+
+		_gl.Clear(ClearBufferMask.ColorBufferBit);
+
+		SwapBuffers(_hdc);
 	}
 
 	#region OpenGL
