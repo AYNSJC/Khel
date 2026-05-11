@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using KhelEngine.Mathf;
 
 public static class Input {
 	private static HashSet<KeyCode> currentKeys = new HashSet<KeyCode>();
@@ -14,6 +15,10 @@ public static class Input {
 				currentKeys.Add(key);
 			}
 		}
+	}
+
+	public static Vector2 GetMousePosition() {
+		return InputBackend.GetMousePosition();
 	}
 
 	public static bool GetKey(KeyCode key) { 

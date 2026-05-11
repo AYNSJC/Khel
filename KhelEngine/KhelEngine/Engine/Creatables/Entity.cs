@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using KhelEngine.Mathf;
+using System.Collections.Generic;
 
 public class Entity {
 	public Transform transfrom = new Transform();

@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using KhelEngine.Mathf;
 using System.Runtime.InteropServices;
 
 public static class InputBackend {
@@ -158,8 +158,30 @@ public static class InputBackend {
 		}
 	}
 
+	[StructLayout(LayoutKind.Sequential)]
+	private struct POINT {
+		public int X;
+		public int Y;
+	}
+
+	[DllImport("user32.dll")]
+	private static extern bool GetCursorPos(out POINT lpPoint);
+
+	[DllImport("user32.dll")]
+	private static extern bool ScreenToClient(nint hWnd, ref POINT lpPoint);
+
 	[DllImport("user32.dll")]
 	private static extern short GetAsyncKeyState(int vKey);
+
+	public static nint WindowHandle;
+
+	public static Vector2 GetMousePosition() {
+		GetCursorPos(out POINT p);
+
+		ScreenToClient(WindowHandle, ref p);
+
+		return new Vector2(p.X, p.Y);
+	}
 
 	public static bool IsKeyPressed(KeyCode key) {
 		int vk = GetVKCode(key);

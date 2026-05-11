@@ -12,6 +12,7 @@ public class PlayerScript : Script {
 	public override void Loop() {
 		GetDirection();
 		MovePlayer();
+		RotatePlayer();
 	}
 
 	private void MovePlayer() {
@@ -19,6 +20,11 @@ public class PlayerScript : Script {
 			entity.transfrom.position += _direction * speed * Engine.deltaTime;
 			PrintPosition();
 		}
+	}
+
+	private void RotatePlayer() {
+		entity.transfrom.LookTowards(Input.GetMousePosition());
+		PrintPosition();
 	}
 
 	private void GetDirection() {
@@ -45,5 +51,6 @@ public class PlayerScript : Script {
 
 	private void PrintPosition() {
 		Logger.Log("Player's Position: " + entity.transfrom.position.ToString());
+		Logger.Log("Player's Rotation: " + entity.transfrom.rotation);
 	}
 }
