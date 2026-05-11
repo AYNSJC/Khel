@@ -582,11 +582,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Files\\Projects\\Code\\C#\\Khel\\Khel\\KhelEngine\\KhelEngine.csproj",
+      "projectUniqueName": "F:\\Code\\C#\\Khel\\Khel\\KhelEngine\\KhelEngine.csproj",
       "projectName": "KhelEngine",
-      "projectPath": "D:\\Files\\Projects\\Code\\C#\\Khel\\Khel\\KhelEngine\\KhelEngine.csproj",
+      "projectPath": "F:\\Code\\C#\\Khel\\Khel\\KhelEngine\\KhelEngine.csproj",
       "packagesPath": "C:\\Users\\AYNSJC\\.nuget\\packages\\",
-      "outputPath": "D:\\Files\\Projects\\Code\\C#\\Khel\\Khel\\KhelEngine\\obj\\",
+      "outputPath": "F:\\Code\\C#\\Khel\\Khel\\KhelEngine\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -605,6 +605,7 @@
       },
       "frameworks": {
         "net8.0": {
+          "framework": "net8.0",
           "targetAlias": "net8.0",
           "projectReferences": {}
         }
@@ -623,6 +624,7 @@
     },
     "frameworks": {
       "net8.0": {
+        "framework": "net8.0",
         "targetAlias": "net8.0",
         "dependencies": {
           "Silk.NET.OpenGL": {

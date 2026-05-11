@@ -15,9 +15,14 @@ public static class EngineGameLoopManager {
 	private static void UpdateAllEntityLoops() {
 		for(int i = 0; i < entityList.Count; i++) {
 			List<Script> entityScriptList = entityList[i].scripts;
+			List<Behaviour> behaviourScriptList = entityList[i].behaviours;
 
 			for(int j = 0; j < entityScriptList.Count; j++) {
 				entityScriptList[j].Loop();
+			}
+
+			for(int j = 0; j < behaviourScriptList.Count; j++) {
+				behaviourScriptList[j].Loop();
 			}
 		}
 	}

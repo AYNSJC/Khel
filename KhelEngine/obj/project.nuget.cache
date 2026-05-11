@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "G3F6Yg4SEKc=",
+  "dgSpecHash": "zspvcc9GT6A=",
   "success": true,
-  "projectFilePath": "D:\\Files\\Projects\\Code\\C#\\Khel\\Khel\\KhelEngine\\KhelEngine.csproj",
+  "projectFilePath": "F:\\Code\\C#\\Khel\\Khel\\KhelEngine\\KhelEngine.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AYNSJC\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\AYNSJC\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\3.1.6\\microsoft.dotnet.platformabstractions.3.1.6.nupkg.sha512",

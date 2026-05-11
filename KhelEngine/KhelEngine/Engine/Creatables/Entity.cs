@@ -20,6 +20,7 @@ public class Entity {
 
 	private void LaunchBehaviours() {
 		for(int i = 0; i < behaviours.Count; i++) {
+			behaviours[i].Setup();
 			behaviours[i].Enter();
 		}
 	}
