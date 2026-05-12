@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace KhelEngine.Mathf {
-	public class Angle {
+	public static class Angle {
 		public static float Degree2Radian(float degree) {
 			return degree * ((float)Math.PI / 180f);
 		}

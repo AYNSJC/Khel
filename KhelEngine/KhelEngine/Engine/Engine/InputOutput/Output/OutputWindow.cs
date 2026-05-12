@@ -7,6 +7,8 @@ public class OutputWindow {
 	// Handle to the actual native window (HWND in Win32)
 	private IntPtr _hwnd;
 
+	public nint hwnd => _hwnd;
+
 	private IntPtr _hdc;
 	private IntPtr _glContext;
 

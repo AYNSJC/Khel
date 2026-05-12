@@ -173,7 +173,7 @@ public static class InputBackend {
 	[DllImport("user32.dll")]
 	private static extern short GetAsyncKeyState(int vKey);
 
-	public static nint WindowHandle;
+	public static nint WindowHandle = Engine.Windom.hwnd;
 
 	public static Vector2 GetMousePosition() {
 		GetCursorPos(out POINT p);

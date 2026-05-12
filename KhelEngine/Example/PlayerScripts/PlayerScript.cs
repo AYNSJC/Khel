@@ -23,7 +23,7 @@ public class PlayerScript : Script {
 	}
 
 	private void RotatePlayer() {
-		entity.transfrom.LookTowards(Input.GetMousePosition());
+		entity.transfrom.LookTowards(Input.GetMouseWorldPosition());
 	}
 
 	private void GetDirection() {

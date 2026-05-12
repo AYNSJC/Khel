@@ -21,6 +21,18 @@ public static class Input {
 		return InputBackend.GetMousePosition();
 	}
 
+	public static Vector2 GetMouseWorldPosition() {
+		int windowWidth = Engine.ProjectSettings.Width;
+		int windowHeight = Engine.ProjectSettings.Height;
+
+		Vector2 mouse = GetMousePosition();
+
+		mouse.x = (mouse.x / windowWidth) * 2f - 1f;
+		mouse.y = 1f - (mouse.y / windowHeight) * 2f;
+
+		return mouse;
+	}
+
 	public static bool GetKey(KeyCode key) { 
 		return currentKeys.Contains(key);
 	}

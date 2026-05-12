@@ -126,10 +126,6 @@ public class QuadRenderer {
 
 		_gl.BindVertexArray(_vao);
 
-		_gl.DrawArrays(
-			PrimitiveType.Triangles,
-			0,
-			6
-		);
+		_gl.DrawArrays(PrimitiveType.Triangles, 0, 6);
 	}
 }
