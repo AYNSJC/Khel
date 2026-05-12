@@ -180,7 +180,7 @@ public class OutputWindow {
 		_gl.Clear(ClearBufferMask.ColorBufferBit);
 
 		foreach(QuadData quad in _quadDataList) {
-			_quadRenderer.Draw(quad.transform.position.x, quad.transform.position.y, quad.color);
+			_quadRenderer.Draw(quad.transform, quad.color);
 		}
 
 		SwapBuffers(_hdc);

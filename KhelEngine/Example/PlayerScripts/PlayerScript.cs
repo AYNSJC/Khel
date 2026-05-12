@@ -1,7 +1,7 @@
 ﻿using KhelEngine.Mathf;
 
 public class PlayerScript : Script {
-	private float speed = 5f;
+	private float speed = 2f;
 
 	private Vector2 _direction = Vector2.Zero;
 
@@ -17,8 +17,7 @@ public class PlayerScript : Script {
 
 	private void MovePlayer() {
 		if(_direction.SquareMagnitude() != 0) {
-			entity.transfrom.position += _direction * speed * Engine.deltaTime;
-			PrintPosition();
+			entity.transfrom.position += _direction * (speed * Engine.deltaTime);
 		}
 	}
 
@@ -46,6 +45,10 @@ public class PlayerScript : Script {
 		}
 
 		_direction.Normalize();
+
+		if(Input.GetKeyDown(KeyCode.SPACE)) {
+			PrintPosition();
+		}
 	}
 
 	private void PrintPosition() {

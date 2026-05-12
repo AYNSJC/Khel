@@ -39,22 +39,10 @@ public class QuadRenderer {
 		_gl.BindBuffer(BufferTargetARB.ArrayBuffer, _vbo);
 
 		fixed(float* v = &vertices[0]) {
-			_gl.BufferData(
-				BufferTargetARB.ArrayBuffer,
-				(nuint)(vertices.Length * sizeof(float)),
-				v,
-				BufferUsageARB.StaticDraw
-			);
+			_gl.BufferData(BufferTargetARB.ArrayBuffer, (nuint)(vertices.Length * sizeof(float)), v, BufferUsageARB.StaticDraw);
 		}
 
-		_gl.VertexAttribPointer(
-			0,
-			3,
-			VertexAttribPointerType.Float,
-			false,
-			3 * sizeof(float),
-			null
-		);
+		_gl.VertexAttribPointer(0, 3, VertexAttribPointerType.Float, false, 3 * sizeof(float), null);
 
 		_gl.EnableVertexAttribArray(0);
 
@@ -65,20 +53,17 @@ public class QuadRenderer {
 	private void SetupShader() {
 		string vertexShaderSource =
 		"""
-        #version 330 core
+        #version 330 core 
 
         layout (location = 0) in vec3 aPosition;
 
         uniform vec2 offset;
+        uniform vec2 scale;
 
         void main()
         {
-            gl_Position = vec4(
-                aPosition.x + offset.x,
-                aPosition.y + offset.y,
-                aPosition.z,
-                1.0
-            );
+            vec2 pos = aPosition.xy * scale + offset;
+            gl_Position = vec4(pos, aPosition.z, 1.0);
         }
         """;
 
@@ -113,12 +98,16 @@ public class QuadRenderer {
 		_gl.DeleteShader(fragmentShader);
 	}
 
-	public void Draw(float x, float y, Vector4 color) {
+	public void Draw(Transform transform, Vector4 color) {
 		_gl.UseProgram(_shaderProgram);
 
 		int offsetLocation = _gl.GetUniformLocation(_shaderProgram, "offset");
 
-		_gl.Uniform2(offsetLocation, x, y);
+		_gl.Uniform2(offsetLocation, transform.position.x, transform.position.y);
+
+		int sizeLocation = _gl.GetUniformLocation(_shaderProgram, "scale");
+
+		_gl.Uniform2(sizeLocation, transform.scale.x, transform.scale.y);
 
 		int colorLocation = _gl.GetUniformLocation(_shaderProgram, "quadColor");
 
