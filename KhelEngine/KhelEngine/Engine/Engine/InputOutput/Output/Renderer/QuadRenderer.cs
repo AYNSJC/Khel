@@ -8,6 +8,8 @@ public class QuadRenderer {
 	private uint _vbo;
 	private uint _shaderProgram;
 
+	float aspect = (float)Engine.ProjectSettings.Width / (float)Engine.ProjectSettings.Height;
+
 	public QuadRenderer(GL gl) {
 		_gl = gl;
 
@@ -16,19 +18,17 @@ public class QuadRenderer {
 	}
 
 	private unsafe void SetupMesh() {
-		float aspect = (float)Engine.ProjectSettings.Height / (float)Engine.ProjectSettings.Width;
-
 		float[] vertices =
 		{
             // triangle 1
-            -0.5f * aspect, -0.5f, 0f,
-			 0.5f * aspect, -0.5f, 0f,
-			 0.5f * aspect,  0.5f, 0f,
+            -0.5f, -0.5f, 0f,
+			 0.5f, -0.5f, 0f,
+			 0.5f,  0.5f, 0f,
 
             // triangle 2
-             0.5f * aspect,  0.5f, 0f,
-			-0.5f * aspect,  0.5f, 0f,
-			-0.5f * aspect, -0.5f, 0f
+             0.5f,  0.5f, 0f,
+			-0.5f,  0.5f, 0f,
+			-0.5f, -0.5f, 0f
 		};
 
 		_vao = _gl.GenVertexArray();
@@ -58,11 +58,21 @@ public class QuadRenderer {
         layout (location = 0) in vec3 aPosition;
 
         uniform vec2 offset;
+        uniform float rotation;
         uniform vec2 scale;
 
         void main()
         {
-            vec2 pos = aPosition.xy * scale + offset;
+            float s = sin(rotation);
+            float c = cos(rotation);
+
+            vec2 rotated;
+
+            rotated.x = aPosition.x * c - aPosition.y * s;
+            rotated.y = aPosition.x * s + aPosition.y * c;
+
+            vec2 pos = rotated * scale + offset;
+
             gl_Position = vec4(pos, aPosition.z, 1.0);
         }
         """;
@@ -101,16 +111,19 @@ public class QuadRenderer {
 	public void Draw(Transform transform, Vector4 color) {
 		_gl.UseProgram(_shaderProgram);
 
-		int offsetLocation = _gl.GetUniformLocation(_shaderProgram, "offset");
+		int aspectLocation = _gl.GetUniformLocation(_shaderProgram, "aspect");
+		_gl.Uniform1(aspectLocation, aspect);
 
+		int offsetLocation = _gl.GetUniformLocation(_shaderProgram, "offset");
 		_gl.Uniform2(offsetLocation, transform.position.x, transform.position.y);
 
-		int sizeLocation = _gl.GetUniformLocation(_shaderProgram, "scale");
+		int rotationLocation = _gl.GetUniformLocation(_shaderProgram, "rotation");
+		_gl.Uniform1(rotationLocation, Angle.Degree2Radian(transform.rotation));
 
+		int sizeLocation = _gl.GetUniformLocation(_shaderProgram, "scale");
 		_gl.Uniform2(sizeLocation, transform.scale.x, transform.scale.y);
 
 		int colorLocation = _gl.GetUniformLocation(_shaderProgram, "quadColor");
-
 		_gl.Uniform4(colorLocation, color.x, color.y, color.z, color.w);
 
 		_gl.BindVertexArray(_vao);
