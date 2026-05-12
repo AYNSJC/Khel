@@ -30,11 +30,7 @@ public class Transform : Behaviour {
 	public void LookTowards(Vector2 lookPosition) {
 		Vector2 dir = lookPosition - position;
 
-		Console.WriteLine(dir);
-
 		float angle = Angle.Radian2Degree((float)Math.Atan2(dir.y, dir.x));
-
-		Console.WriteLine(angle);
 
 		rotation = angle;
 	}

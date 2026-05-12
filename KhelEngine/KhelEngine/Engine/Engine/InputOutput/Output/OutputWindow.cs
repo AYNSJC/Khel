@@ -1,5 +1,6 @@
 ﻿using Silk.NET.OpenGL;
 using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
 public class OutputWindow {
@@ -43,16 +44,30 @@ public class OutputWindow {
 
 	private GL _gl;
 
-	
+	private List<QuadData> _quadDataList = new List<QuadData>();
+
+	public GL gl => _gl;
+
+	private int _width;
+	private int _height;
+
+	private QuadRenderer _quadRenderer;
+
+
 	public OutputWindow(int width, int height, string title) {
 		RegisterWindowClass();
 
-		_hwnd = CreateWindowEx(0, "OutputWindowClass", title, WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, width, height, IntPtr.Zero, IntPtr.Zero, IntPtr.Zero, IntPtr.Zero);
+		_width = width;
+		_height = height;
+
+		_hwnd = CreateWindowEx(0, "OutputWindowClass", title, WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, _width, _height, IntPtr.Zero, IntPtr.Zero, IntPtr.Zero, IntPtr.Zero);
 
 		ShowWindow(_hwnd, 1);
 		UpdateWindow(_hwnd);
 
 		CreateOpenGLContext();
+
+		_quadRenderer = new QuadRenderer(gl);
 	}
 
 	public void PollEvents() {
@@ -146,12 +161,25 @@ public class OutputWindow {
 
 			return proc;
 		});
+
+		RECT rect;
+
+		GetClientRect(_hwnd, out rect);
+
+		int width = rect.right - rect.left;
+		int height = rect.bottom - rect.top;
+
+		_gl.Viewport(0, 0, (uint)width, (uint)height);
 	}
 
 	public void Render() {
 		_gl.ClearColor(0f, 1f, 1f, 1f);
 
 		_gl.Clear(ClearBufferMask.ColorBufferBit);
+
+		foreach(QuadData quad in _quadDataList) {
+			_quadRenderer.Draw(quad.transform.position.x, quad.transform.position.y, quad.color);
+		}
 
 		SwapBuffers(_hdc);
 	}
@@ -237,5 +265,24 @@ public class OutputWindow {
 
 	[DllImport("user32.dll")]
 	static extern void PostQuitMessage(int nExitCode);
+
+	[StructLayout(LayoutKind.Sequential)]
+	struct RECT {
+		public int left;
+		public int top;
+		public int right;
+		public int bottom;
+	}
+
+	[DllImport("user32.dll")]
+	static extern bool GetClientRect(
+		IntPtr hWnd,
+		out RECT lpRect
+	);
+
 	#endregion
+
+	public void AddQuad(QuadData quadData) {
+		_quadDataList.Add(quadData);
+	}
 }

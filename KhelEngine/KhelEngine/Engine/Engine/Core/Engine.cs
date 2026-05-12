@@ -11,7 +11,15 @@ public static class Engine {
 
 	private static OutputWindow window;
 
+	public static OutputWindow Windom => window;
+
+	private static IProjectSettings projectSettings;
+
+	public static IProjectSettings ProjectSettings => projectSettings;
+
 	public static void StartGame(IProjectSettings pS) {
+		projectSettings = pS;
+
 		window = new OutputWindow(pS.Width, pS.Height, pS.ProjectName);
 
 		SceneManager.UpdateSceneList(pS.workingScenes);

@@ -24,7 +24,6 @@ public class PlayerScript : Script {
 
 	private void RotatePlayer() {
 		entity.transfrom.LookTowards(Input.GetMousePosition());
-		PrintPosition();
 	}
 
 	private void GetDirection() {

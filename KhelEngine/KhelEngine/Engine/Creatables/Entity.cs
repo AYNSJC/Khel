@@ -1,13 +1,24 @@
-﻿using KhelEngine.Mathf;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 public class Entity {
 	public Transform transfrom = new Transform();
 	public List<Behaviour> behaviours = new List<Behaviour>();
 	public List<Script> scripts = new List<Script>();
 
-	public void AddBehaviour(Behaviour behaviour) { 
+	public Behaviour AddBehaviour(Behaviour behaviour) { 
 		behaviours.Add(behaviour);
+
+		behaviour.entity = this;
+
+		return behaviour;
+	}
+
+	public Script AddScript(Script script) {
+		scripts.Add(script);
+
+		script.entity = this;
+
+		return script;
 	}
 
 	public void Setup() {
@@ -30,16 +41,5 @@ public class Entity {
 			scripts[i].Setup();
 			scripts[i].Enter();
 		}
-	}
-
-	public void AssignScripts() {
-		for(int i = 0; i < scripts.Count; i++) {
-			scripts[i].entity = this;
-		}
-	}
-
-	public void AddScript(Script script) {
-		scripts.Add(script);
-		AssignScripts();
 	}
 }
