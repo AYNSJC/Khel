@@ -25,12 +25,12 @@ public static class Input {
 		int windowWidth = Engine.ProjectSettings.Width;
 		int windowHeight = Engine.ProjectSettings.Height;
 
-		Vector2 mouse = GetMousePosition();
+		Vector2 mouseWorldPosition = GetMousePosition();
 
-		mouse.x = (mouse.x / windowWidth) * 2f - 1f;
-		mouse.y = 1f - (mouse.y / windowHeight) * 2f;
+		mouseWorldPosition.x = (mouseWorldPosition.x / windowWidth) * 2f - 1f;
+		mouseWorldPosition.y = 1f - (mouseWorldPosition.y / windowHeight) * 2f;
 
-		return mouse;
+		return mouseWorldPosition;
 	}
 
 	public static bool GetKey(KeyCode key) { 
