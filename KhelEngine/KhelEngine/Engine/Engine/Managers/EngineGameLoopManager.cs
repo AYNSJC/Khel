@@ -31,6 +31,21 @@ public static class EngineGameLoopManager {
 		entityList.Add(entity);
 	}
 
+	public static void RemoveEntity(Entity entity) {
+		entityList.Remove(entity);
+
+		List<Script> entityScriptList = entity.scripts;
+		List<Behaviour> behaviourScriptList = entity.behaviours;
+
+		for(int j = 0; j < entityScriptList.Count; j++) {
+			entityScriptList[j].Exit();
+		}
+
+		for(int j = 0; j < behaviourScriptList.Count; j++) {
+			behaviourScriptList[j].Exit();
+		}
+	}
+
 	public static void RefreshEntities(List<Entity> entities) {
 		entityList = entities;
 	}

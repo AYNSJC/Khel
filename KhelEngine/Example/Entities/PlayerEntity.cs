@@ -4,11 +4,12 @@ public class PlayerEntity : Entity {
 	public PlayerEntity() {
 		transfrom.position.x = 0f;
 		transfrom.rotation = 15f;
-		transfrom.scale = new Vector2(0.5f, 0.5f);
+		transfrom.scale = Vector2.One;
 
 		AddScript(new PlayerScript());
 
 		ImageRenderer imgRen = (ImageRenderer)AddBehaviour(new ImageRenderer());
-		imgRen.color = Color.Olive;
+		imgRen.scale = new Vector2(0.25f, 0.25f);
+		imgRen.color = Color.Red;
 	}
 }

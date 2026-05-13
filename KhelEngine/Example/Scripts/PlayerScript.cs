@@ -46,6 +46,10 @@ public class PlayerScript : Script {
 
 		_direction.Normalize();
 
+		if(Input.GetKeyDown(KeyCode.LEFT_MOUSE_BUTTON)) {
+			Instantiate.Create(new BulletEntity(), entity.transfrom.position, entity.transfrom.rotation);
+		}
+
 		if(Input.GetKeyDown(KeyCode.SPACE)) {
 			PrintPosition();
 		}

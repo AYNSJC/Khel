@@ -287,4 +287,7 @@ public class OutputWindow {
 	public void AddQuad(QuadData quadData) {
 		_quadDataList.Add(quadData);
 	}
+	public void RemoveQuad(QuadData quadData) {
+		_quadDataList.Remove(quadData);
+	}
 }
