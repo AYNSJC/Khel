@@ -13,8 +13,7 @@ public class Transform : Behaviour {
 			forward.x = (float)Math.Cos(Angle.Degree2Radian(rotation));
 			forward.y = (float)Math.Sin(Angle.Degree2Radian(rotation));
 
-			// 7 is hardcoded as found by testing
-			return forward;
+			return forward.Normalize();
 		}
 	}
 
@@ -24,7 +23,7 @@ public class Transform : Behaviour {
 			right.x = -(float)Math.Sin(Angle.Degree2Radian(rotation));
 			right.y = (float)Math.Cos(Angle.Degree2Radian(rotation));
 
-			return right;
+			return right.Normalize();
 		}
 	}
 
