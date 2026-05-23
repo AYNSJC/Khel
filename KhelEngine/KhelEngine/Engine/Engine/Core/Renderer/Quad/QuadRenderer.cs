@@ -1,5 +1,6 @@
 ﻿using KhelEngine.Mathf;
 using Silk.NET.OpenGL;
+using System.Numerics;
 
 public class QuadRenderer {
 	private GL _gl;
@@ -10,7 +11,14 @@ public class QuadRenderer {
 
 	float aspect = (float)Engine.ProjectSettings.Width / (float)Engine.ProjectSettings.Height;
 
+	private Matrix4x4 _projection;
+
 	public QuadRenderer(GL gl) {
+		float worldHeight = 10f;
+		float worldWidth = worldHeight * aspect;
+
+		_projection = Matrix4x4.CreateOrthographic(worldWidth, worldHeight, -1f, 1f);
+
 		_gl = gl;
 
 		SetupMesh();
@@ -52,42 +60,47 @@ public class QuadRenderer {
 
 	private void SetupShader() {
 		string vertexShaderSource =
-		"""
-        #version 330 core 
+        """
+         #version 330 core
 
-        layout (location = 0) in vec3 aPosition;
+         layout (location = 0) in vec3 aPosition;
 
-        uniform vec2 offset;
-        uniform float rotation;
-        uniform vec2 scale;
+         uniform mat4 projection;
+         uniform vec2 offset;
+         uniform float rotation;
+         uniform vec2 scale;
 
-        void main()
-        {
+         void main()
+         {
+            vec2 scaled = aPosition.xy * scale;
+
             float s = sin(rotation);
             float c = cos(rotation);
 
             vec2 rotated;
 
-            rotated.x = aPosition.x * c - aPosition.y * s;
-            rotated.y = aPosition.x * s + aPosition.y * c;
+            rotated.x = scaled.x * c - scaled.y * s;
+            rotated.y = scaled.x * s + scaled.y * c;
 
-            vec2 pos = rotated * scale + offset;
+            vec2 pos = rotated + offset;
 
-            gl_Position = vec4(pos, aPosition.z, 1.0);
-        }
-        """;
+            gl_Position = projection * vec4(pos, aPosition.z, 1.0);
+         }
+         """;
 
 		string fragmentShaderSource =
-		"#version 330 core\n" +
-		"\n" +
-		"out vec4 FragColor;\n" +
-		"\n" +
-		"uniform vec4 quadColor;\n" +
-		"\n" +
-		"void main()\n" +
-		"{\n" +
-		"    FragColor = quadColor;\n" +
-		"}";
+		"""
+         #version 330 core
+
+         out vec4 FragColor;
+
+         uniform vec4 quadColor;
+
+         void main()
+         {
+            FragColor = quadColor;
+         }
+        """;
 
 		uint vertexShader = _gl.CreateShader(ShaderType.VertexShader);
 		_gl.ShaderSource(vertexShader, vertexShaderSource);
@@ -108,11 +121,15 @@ public class QuadRenderer {
 		_gl.DeleteShader(fragmentShader);
 	}
 
-	public void Draw(Transform transform, Vector4 color) {
+	public void Draw(Transform transform, KhelEngine.Mathf.Vector4 color) {
 		_gl.UseProgram(_shaderProgram);
 
-		int aspectLocation = _gl.GetUniformLocation(_shaderProgram, "aspect");
-		_gl.Uniform1(aspectLocation, aspect);
+		int projectionLocation = _gl.GetUniformLocation(_shaderProgram, "projection");
+		unsafe {
+			fixed(float* projectionPtr = &_projection.M11) {
+				_gl.UniformMatrix4(projectionLocation, 1, true, projectionPtr);
+			}
+		}
 
 		int offsetLocation = _gl.GetUniformLocation(_shaderProgram, "offset");
 		_gl.Uniform2(offsetLocation, transform.position.x, transform.position.y);

@@ -1,6 +1,7 @@
 ﻿using Silk.NET.OpenGL;
 using System;
 using System.Collections.Generic;
+using System.Numerics;
 using System.Runtime.InteropServices;
 
 public class OutputWindow {
@@ -55,6 +56,7 @@ public class OutputWindow {
 
 	private QuadRenderer _quadRenderer;
 
+	private float aspect;
 
 	public OutputWindow(int width, int height, string title) {
 		RegisterWindowClass();
@@ -66,6 +68,13 @@ public class OutputWindow {
 
 		ShowWindow(_hwnd, 1);
 		UpdateWindow(_hwnd);
+
+		aspect = (float) _width / (float) _height;
+
+		float worldHeight = 10f;
+		float worldWidth = worldHeight * aspect;
+
+		var _projection = Matrix4x4.CreateOrthographic(worldWidth, worldHeight, -1f, 1f);
 
 		CreateOpenGLContext();
 

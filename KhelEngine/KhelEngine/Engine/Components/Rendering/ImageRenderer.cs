@@ -11,7 +11,7 @@ public class ImageRenderer : Behaviour {
 
 		quadData.transform.position = entity.transfrom.position;
 		quadData.transform.rotation = entity.transfrom.rotation;
-		quadData.transform.scale = scale;
+		quadData.transform.scale = new Vector2(scale.x * entity.transfrom.scale.x, scale.y * entity.transfrom.scale.y);
 		quadData.color = color;
 
 		Engine.Windom.AddQuad(quadData);

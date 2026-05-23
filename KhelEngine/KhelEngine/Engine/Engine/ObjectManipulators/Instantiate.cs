@@ -9,6 +9,7 @@ public static class Instantiate {
 
 		spawnedEntity.transfrom.position = position;
 		spawnedEntity.transfrom.rotation = rotation;
+		spawnedEntity.transfrom.rotation = rotation;
 
 		return spawnedEntity;
 	}
