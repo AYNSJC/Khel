@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KhelEngine")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb536bd972ba28c282b25b08f982f948e2c6dfdb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+996cc8858e3fb3339330089975c378b0481573a4")]
 [assembly: System.Reflection.AssemblyProductAttribute("KhelEngine")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KhelEngine")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

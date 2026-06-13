@@ -9,7 +9,7 @@ public static class Engine {
 
 	public static float deltaTime { get; private set; }
 
-	private static OutputWindow window;
+	public static OutputWindow window;
 
 	public static OutputWindow Windom => window;
 

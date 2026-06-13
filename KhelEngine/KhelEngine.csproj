@@ -6,5 +6,6 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Silk.NET.OpenGL" Version="2.23.0" />
+    <PackageReference Include="StbImageSharp" Version="2.30.15" />
   </ItemGroup>
 </Project>

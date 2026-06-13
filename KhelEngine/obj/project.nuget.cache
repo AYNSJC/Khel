@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tKjwPcrnvqk=",
+  "dgSpecHash": "M58h14PLPio=",
   "success": true,
   "projectFilePath": "F:\\Code\\C#\\Khel\\Khel\\KhelEngine\\KhelEngine.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\AYNSJC\\.nuget\\packages\\silk.net.core\\2.23.0\\silk.net.core.2.23.0.nupkg.sha512",
     "C:\\Users\\AYNSJC\\.nuget\\packages\\silk.net.maths\\2.23.0\\silk.net.maths.2.23.0.nupkg.sha512",
     "C:\\Users\\AYNSJC\\.nuget\\packages\\silk.net.opengl\\2.23.0\\silk.net.opengl.2.23.0.nupkg.sha512",
+    "C:\\Users\\AYNSJC\\.nuget\\packages\\stbimagesharp\\2.30.15\\stbimagesharp.2.30.15.nupkg.sha512",
     "C:\\Users\\AYNSJC\\.nuget\\packages\\system.io.pipelines\\9.0.9\\system.io.pipelines.9.0.9.nupkg.sha512",
     "C:\\Users\\AYNSJC\\.nuget\\packages\\system.memory\\4.6.3\\system.memory.4.6.3.nupkg.sha512",
     "C:\\Users\\AYNSJC\\.nuget\\packages\\system.numerics.vectors\\4.6.1\\system.numerics.vectors.4.6.1.nupkg.sha512",

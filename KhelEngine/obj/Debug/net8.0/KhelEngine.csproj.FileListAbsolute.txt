@@ -52,3 +52,4 @@ F:\Code\C#\Khel\Khel\KhelEngine\obj\Debug\net8.0\refint\KhelEngine.dll
 F:\Code\C#\Khel\Khel\KhelEngine\obj\Debug\net8.0\KhelEngine.pdb
 F:\Code\C#\Khel\Khel\KhelEngine\obj\Debug\net8.0\KhelEngine.genruntimeconfig.cache
 F:\Code\C#\Khel\Khel\KhelEngine\obj\Debug\net8.0\ref\KhelEngine.dll
+F:\Code\C#\Khel\Khel\KhelEngine\bin\Debug\net8.0\StbImageSharp.dll

@@ -26,17 +26,14 @@ public class QuadRenderer {
 	}
 
 	private unsafe void SetupMesh() {
-		float[] vertices =
-		{
-            // triangle 1
-            -0.5f, -0.5f, 0f,
-			 0.5f, -0.5f, 0f,
-			 0.5f,  0.5f, 0f,
+		float[] vertices = {
+			-0.5f, -0.5f, 0f,  0f, 1f,
+			 0.5f, -0.5f, 0f,  1f, 1f,
+			 0.5f,  0.5f, 0f,  1f, 0f,
 
-            // triangle 2
-             0.5f,  0.5f, 0f,
-			-0.5f,  0.5f, 0f,
-			-0.5f, -0.5f, 0f
+			0.5f,  0.5f, 0f,  1f, 0f,
+			-0.5f,  0.5f, 0f,  0f, 0f,
+			-0.5f, -0.5f, 0f,  0f, 1f
 		};
 
 		_vao = _gl.GenVertexArray();
@@ -50,9 +47,16 @@ public class QuadRenderer {
 			_gl.BufferData(BufferTargetARB.ArrayBuffer, (nuint)(vertices.Length * sizeof(float)), v, BufferUsageARB.StaticDraw);
 		}
 
-		_gl.VertexAttribPointer(0, 3, VertexAttribPointerType.Float, false, 3 * sizeof(float), null);
+		_gl.Enable(GLEnum.Blend);
+		_gl.BlendFunc(GLEnum.SrcAlpha,GLEnum.OneMinusSrcAlpha);
 
+		// position attribute (location 0)
+		_gl.VertexAttribPointer(0, 3, VertexAttribPointerType.Float, false, 5 * sizeof(float), (void*)0);
 		_gl.EnableVertexAttribArray(0);
+
+		// uv attribute (location 1)
+		_gl.VertexAttribPointer(1, 2, VertexAttribPointerType.Float, false, 5 * sizeof(float), (void*)(3 * sizeof(float)));
+		_gl.EnableVertexAttribArray(1);
 
 		_gl.BindBuffer(BufferTargetARB.ArrayBuffer, 0);
 		_gl.BindVertexArray(0);
@@ -60,15 +64,18 @@ public class QuadRenderer {
 
 	private void SetupShader() {
 		string vertexShaderSource =
-        """
+		"""
          #version 330 core
 
          layout (location = 0) in vec3 aPosition;
+         layout (location = 1) in vec2 aTexCoord;
 
          uniform mat4 projection;
          uniform vec2 offset;
          uniform float rotation;
          uniform vec2 scale;
+
+         out vec2 TexCoord;
 
          void main()
          {
@@ -85,6 +92,8 @@ public class QuadRenderer {
             vec2 pos = rotated + offset;
 
             gl_Position = projection * vec4(pos, aPosition.z, 1.0);
+
+            TexCoord = aTexCoord;
          }
          """;
 
@@ -94,11 +103,20 @@ public class QuadRenderer {
 
          out vec4 FragColor;
 
+         in vec2 TexCoord;
+
          uniform vec4 quadColor;
+         uniform sampler2D uTexture;
+         uniform bool hasTexture;
 
          void main()
          {
-            FragColor = quadColor;
+            if (hasTexture) {
+                FragColor = texture(uTexture, TexCoord) * quadColor;
+            } 
+            else {
+                FragColor = quadColor;
+            }
          }
         """;
 
@@ -121,7 +139,7 @@ public class QuadRenderer {
 		_gl.DeleteShader(fragmentShader);
 	}
 
-	public void Draw(Transform transform, KhelEngine.Mathf.Vector4 color) {
+	public void Draw(Transform transform, KhelEngine.Mathf.Vector4 color, uint textureId = 0, bool hasTexture = false) {
 		_gl.UseProgram(_shaderProgram);
 
 		int projectionLocation = _gl.GetUniformLocation(_shaderProgram, "projection");
@@ -142,6 +160,16 @@ public class QuadRenderer {
 
 		int colorLocation = _gl.GetUniformLocation(_shaderProgram, "quadColor");
 		_gl.Uniform4(colorLocation, color.x, color.y, color.z, color.w);
+
+		int hasTextureLocation = _gl.GetUniformLocation(_shaderProgram, "hasTexture");
+		_gl.Uniform1(hasTextureLocation, hasTexture ? 1 : 0);
+
+		if(hasTexture) {
+			_gl.ActiveTexture(TextureUnit.Texture0);
+			_gl.BindTexture(TextureTarget.Texture2D, textureId);
+			int textureLocation = _gl.GetUniformLocation(_shaderProgram, "uTexture");
+			_gl.Uniform1(textureLocation, 0);
+		}
 
 		_gl.BindVertexArray(_vao);
 
