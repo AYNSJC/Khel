@@ -16,9 +16,8 @@
 	private void DeleteAfterTime() {
 		if(currentTimer > 0) {
 			currentTimer -= Engine.deltaTime;
-		}
-
-		if(currentTimer <= 0) {
+		} 
+		else {
 			Deinstantiate.Delete(entity);
 		}
 	}

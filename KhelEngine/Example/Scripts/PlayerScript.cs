@@ -47,7 +47,7 @@ public class PlayerScript : Script {
 		_direction.Normalize();
 
 		if(Input.GetKeyDown(KeyCode.LEFT_MOUSE_BUTTON)) {
-			Instantiate.Create(new BulletEntity(), entity.transfrom.position + entity.transfrom.Forward, entity.transfrom.rotation);
+			Instantiate.Create(new BulletEntity(), entity.transfrom.position + entity.transfrom.Forward, entity.transfrom.rotation, Vector2.One);
 		}
 
 		if(Input.GetKeyDown(KeyCode.SPACE)) {
@@ -58,5 +58,6 @@ public class PlayerScript : Script {
 	private void PrintPosition() {
 		Logger.Log("Player's Position: " + entity.transfrom.position.ToString());
 		Logger.Log("Player's Rotation: " + entity.transfrom.rotation);
+		Logger.Log(SceneManager.activeScene.entityList.Count.ToString());
 	}
 }

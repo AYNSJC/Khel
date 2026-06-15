@@ -50,7 +50,7 @@ public class ImageRenderer : Behaviour {
 		gl.ActiveTexture(TextureUnit.Texture0);
 		gl.BindTexture(TextureTarget.Texture2D, textureId);
 
-		ImageResult image = ImageResult.FromMemory(System.IO.File.ReadAllBytes(path), ColorComponents.RedGreenBlueAlpha);
+		ImageResult image = ImageResult.FromMemory(File.ReadAllBytes(path), ColorComponents.RedGreenBlueAlpha);
 
 		gl.TexImage2D(TextureTarget.Texture2D, 0, InternalFormat.Rgba, (uint)image.Width, (uint)image.Height, 0, PixelFormat.Rgba, PixelType.UnsignedByte, (ReadOnlySpan<byte>)image.Data);
 

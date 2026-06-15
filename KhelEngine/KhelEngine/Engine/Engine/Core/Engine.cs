@@ -23,7 +23,6 @@ public static class Engine {
 		window = new OutputWindow(pS.Width, pS.Height, pS.ProjectName);
 
 		SceneManager.UpdateSceneList(pS.workingScenes);
-		SceneManager.SceneChanged += ChangeActiveScene;
 	}
 
 	public static void UpdateGame() {
@@ -44,10 +43,5 @@ public static class Engine {
 			EngineGameFixedLoopManager.UpdateGame();
 			fixedTimer -= fixedStep;
 		}
-	}
-
-	private static void ChangeActiveScene(Scene scene) {
-		EngineGameLoopManager.RefreshEntities(scene.entities);
-		EngineGameFixedLoopManager.RefreshEntities(scene.entities);
 	}
 }
