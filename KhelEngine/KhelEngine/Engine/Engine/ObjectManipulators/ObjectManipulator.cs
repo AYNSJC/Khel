@@ -21,8 +21,8 @@ public static class ObjectManipulator {
 	private static void RemoveEntity(Entity entity) {
 		SceneManager.activeScene.entityList.Remove(entity);
 
-		List<Script> entityScriptList = entity.scripts;
-		List<Behaviour> behaviourScriptList = entity.behaviours;
+		List<Script> entityScriptList = entity.scriptList;
+		List<Behaviour> behaviourScriptList = entity.behaviourList;
 
 		for(int j = 0; j < entityScriptList.Count; j++) {
 			entityScriptList[j].Exit();

@@ -55,5 +55,13 @@ namespace KhelEngine.Mathf {
 			float mag = 1f / (float)Math.Sqrt(sqMag);
 			return new Vector2(x * mag, y * mag);
 		}
+
+		public static float DotProduct(Vector2 a, Vector2 b) {
+			return (a.x * b.x + a.y * b.y);
+		}
+
+		public static float Distance(Vector2 a, Vector2 b) {
+			return (a - b).Magnitude();
+		}
 	}
 }

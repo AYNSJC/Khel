@@ -1,19 +1,26 @@
-﻿using KhelEngine.Mathf;
-using System.Collections.Generic;
+﻿using System;
 
 public class Collider : Behaviour {
-	public List<Vector2> pointsPositionList;
-
 	public bool isTrigger;
 
-	public bool useGravitity;
+	public bool wasInCollision;
 
-	public bool isStatic;
-
-	protected void InContactEnter(Collider other) { }
-	protected void InContactExit(Collider other) { }
+	public event Action<Collider> OnCollisionEnter;
+	public event Action<Collider> OnCollisionExit;
 
 	public override void Setup() {
 		PhysicsManager.AddCollider(this);
+	}
+
+	public override void Exit() {
+		PhysicsManager.RemoveCollider(this);
+	}
+
+	public void CollisionEntered(Collider col) {
+		 OnCollisionEnter?.Invoke(col);
+	}
+
+	public void CollisionExited(Collider col) {
+		OnCollisionExit?.Invoke(col);
 	}
 }

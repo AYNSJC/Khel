@@ -1,4 +1,4 @@
-﻿public class BullletScript : Script {
+﻿public class BulletScript : Script {
 	public float speed;
 
 	public float deleteTimer;
@@ -6,11 +6,21 @@
 
 	public override void Enter() {
 		currentTimer = deleteTimer;
+
+		CircleCollider circleCollider = entity.GetBehaviour<CircleCollider>();
+
+		circleCollider.OnCollisionEnter += OnCollisionEnter;
 	}
 
 	public override void Loop() {
 		entity.transfrom.position += entity.transfrom.Forward * (speed * Engine.deltaTime);
 		DeleteAfterTime();
+	}
+
+	private void OnCollisionEnter(Collider col) {
+		if(col.entity is ZombieEntity) {
+			Deinstantiate.Delete(col.entity);
+		}
 	}
 
 	private void DeleteAfterTime() {
