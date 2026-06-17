@@ -41,6 +41,32 @@ public class Entity {
 		return null;
 	}
 
+	public static T FindFirstEntityOfType<T>() where T : Entity {
+		List<Entity> allEntites = SceneManager.activeScene.entityList;
+
+		for(int i = 0;i < allEntites.Count; i++) {
+			if(allEntites[i] is T entity) {
+				return entity;
+			}
+		}
+
+		return null;
+	}
+
+	public static List<Entity> FindEntitiesOfType<T>() where T : Entity {
+		List<Entity> allEntites = SceneManager.activeScene.entityList;
+
+		List<Entity> entityToReturn = new List<Entity>();
+
+		for(int i = 0; i < allEntites.Count; i++) {
+			if(allEntites[i] is T entity) {
+				entityToReturn.Add(entity);
+			}
+		}
+
+		return entityToReturn;
+	}
+
 	public void Setup() {
 		AddBehaviour(transfrom);
 		transfrom.entity = this;

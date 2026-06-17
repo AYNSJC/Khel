@@ -5,6 +5,8 @@ using KhelEngine.Mathf;
 using System.IO;
 
 public class ImageRenderer : Behaviour {
+	public Vector2 positionOffset = Vector2.Zero;
+	public float rotationOffset = 0f;
 	public Vector2 scale = Vector2.One;
 	public Vector4 color = Vector4.One;
 
@@ -15,10 +17,7 @@ public class ImageRenderer : Behaviour {
 	public override void Enter() {
 		quadData.transform = new Transform();
 
-		quadData.transform.position = entity.transfrom.position;
-		quadData.transform.rotation = entity.transfrom.rotation;
-		quadData.transform.scale = new Vector2(scale.x * entity.transfrom.scale.x, scale.y * entity.transfrom.scale.y);
-		quadData.color = color;
+		UpdateTransformAndColor();
 
 		if(!string.IsNullOrEmpty(fullImagePath)) {
 			quadData.textureId = LoadTexture(fullImagePath);
@@ -29,10 +28,7 @@ public class ImageRenderer : Behaviour {
 	}
 
 	public override void Loop() {
-		quadData.transform.position = entity.transfrom.position;
-		quadData.transform.rotation = entity.transfrom.rotation;
-		quadData.transform.scale = new Vector2(scale.x * entity.transfrom.scale.x, scale.y * entity.transfrom.scale.y);
-		quadData.color = color;
+		UpdateTransformAndColor();
 	}
 
 	public override void Exit() {
@@ -41,6 +37,13 @@ public class ImageRenderer : Behaviour {
 		if(quadData.hasTexture) {
 			Engine.window.gl.DeleteTexture(quadData.textureId);
 		}
+	}
+
+	private void UpdateTransformAndColor() {
+		quadData.transform.position = entity.transfrom.position + positionOffset;
+		quadData.transform.rotation = entity.transfrom.rotation + rotationOffset;
+		quadData.transform.scale = new Vector2(scale.x * entity.transfrom.scale.x, scale.y * entity.transfrom.scale.y);
+		quadData.color = color;
 	}
 
 	private uint LoadTexture(string path) {
