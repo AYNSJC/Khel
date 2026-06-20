@@ -30,6 +30,9 @@ public static class PhysicsManager {
 
 				i.CollisionEntered(j);
 				j.CollisionEntered(i);
+
+				i.entity.GetBehaviour<Rigidbody>()?.Collided(j.entity);
+				j.entity.GetBehaviour<Rigidbody>()?.Collided(i.entity);
 			}
 		}
 		else {
