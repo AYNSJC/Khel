@@ -12,7 +12,7 @@ public class BulletEntity : Entity {
 		AddBehaviour(new CircleCollider());
 
 		ImageRenderer imgRen = (ImageRenderer)AddBehaviour(new ImageRenderer());
-		imgRen.fullImagePath = "F:\\Code\\C#\\Khel\\Khel\\KhelEngine\\Example\\Graphics\\CrossAirDoor.png";
+		imgRen.fullImagePath = "F:\\Code\\C#\\Khel\\Khel\\KhelEngine\\Example\\Graphics\\Particle.png";
 		imgRen.scale = new Vector2(2f, 2f);
 	}
 }
