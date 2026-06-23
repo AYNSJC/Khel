@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 
 public class Entity {
-	public Transform transfrom = new Transform();
+	public Transform transform = new Transform();
 	public List<Behaviour> behaviourList = new List<Behaviour>();
 	public List<Script> scriptList = new List<Script>();
 
@@ -68,8 +68,8 @@ public class Entity {
 	}
 
 	public void Setup() {
-		AddBehaviour(transfrom);
-		transfrom.entity = this;
+		AddBehaviour(transform);
+		transform.entity = this;
 
 		LaunchBehaviours();
 		LaunchScripts();

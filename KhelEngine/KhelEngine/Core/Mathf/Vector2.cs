@@ -45,7 +45,7 @@ namespace KhelEngine.Mathf {
 			return (x * x + y * y);
 		}
 
-		public Vector2 Normalize() {
+		public Vector2 Normalized() {
 			float sqMag = SquareMagnitude();
 
 			if(sqMag == 0) {

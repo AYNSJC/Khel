@@ -2,9 +2,9 @@
 
 public class PlayerEntity : Entity {
 	public PlayerEntity() {
-		transfrom.position = Vector2.Zero;
-		transfrom.rotation = 15f;
-		transfrom.scale = Vector2.One;
+		transform.position = Vector2.Zero;
+		transform.rotation = 15f;
+		transform.scale = Vector2.One;
 
 		AddScript(new PlayerScript());
 

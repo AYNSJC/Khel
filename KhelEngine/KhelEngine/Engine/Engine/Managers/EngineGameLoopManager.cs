@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-public static class EngineGameLoopManager {
+﻿public static class EngineGameLoopManager {
 	public static void UpdateGame() {
 		UpdateInput();
 		UpdateActiveSceneEntites();

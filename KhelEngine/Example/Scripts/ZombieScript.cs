@@ -8,8 +8,8 @@ public class ZombieScript : Script {
 	}
 
 	public override void Loop() {
-		entity.transfrom.LookTowards(playerEntity.transfrom.position);
+		entity.transform.LookTowards(playerEntity.transform.position);
 
-		entity.transfrom.position += entity.transfrom.Forward * 1f * Engine.deltaTime;
+		entity.transform.position += entity.transform.Forward * 1f * Engine.deltaTime;
 	}
 }

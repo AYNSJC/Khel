@@ -1,9 +1,17 @@
 ﻿using KhelEngine.Mathf;
 
 public class Rigidbody : Behaviour {
-	public void Collided(Entity other) {
-		Vector2 objectsDirection = other.transfrom.position - entity.transfrom.position;
+	private float precition = 0.01f;
 
-		entity.transfrom.position -= objectsDirection * 100f * Engine.deltaTime;
+	public void Collided(Entity other, float combinedRadius) {
+		Vector2 direction = entity.transform.position - other.transform.position;
+		float distance = direction.Magnitude();
+		float overlap = combinedRadius - distance;
+
+		if(overlap > 0f) {
+			Vector2 correction = direction.Normalized() * (overlap / 2f + precition);
+			entity.transform.position += correction;
+			other.transform.position -= correction;
+		}
 	}
 }

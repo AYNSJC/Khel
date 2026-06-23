@@ -2,9 +2,9 @@
 
 public class ZombieEntity : Entity {
 	public ZombieEntity() {
-		transfrom.position = new Vector2(5f, 0f);
-		transfrom.rotation = 15f;
-		transfrom.scale = Vector2.One;
+		transform.position = new Vector2(5f, 0f);
+		transform.rotation = 15f;
+		transform.scale = Vector2.One;
 
 		AddBehaviour(new CircleCollider());
 		AddBehaviour(new Rigidbody());

@@ -7,9 +7,9 @@ public static class Instantiate {
 
 		Entity spawnedEntity = ObjectManipulator.CreateEntity(type);
 
-		spawnedEntity.transfrom.position = position;
-		spawnedEntity.transfrom.rotation = rotation;
-		spawnedEntity.transfrom.scale = scale;
+		spawnedEntity.transform.position = position;
+		spawnedEntity.transform.rotation = rotation;
+		spawnedEntity.transform.scale = scale;
 
 		return spawnedEntity;
 	}

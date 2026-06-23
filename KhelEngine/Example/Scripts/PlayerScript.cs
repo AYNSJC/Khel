@@ -17,12 +17,12 @@ public class PlayerScript : Script {
 
 	private void MovePlayer() {
 		if(_direction.SquareMagnitude() != 0) {
-			entity.transfrom.position += _direction * (speed * Engine.deltaTime);
+			entity.transform.position += _direction * (speed * Engine.deltaTime);
 		}
 	}
 
 	private void RotatePlayer() {
-		entity.transfrom.LookTowards(Input.GetMouseWorldPosition());
+		entity.transform.LookTowards(Input.GetMouseWorldPosition());
 	}
 
 	private void GetDirection() {
@@ -44,10 +44,10 @@ public class PlayerScript : Script {
 			_direction.x = -1;
 		}
 
-		_direction.Normalize();
+		_direction.Normalized();
 
 		if(Input.GetKeyDown(KeyCode.LEFT_MOUSE_BUTTON)) {
-			Instantiate.Create(new BulletEntity(), entity.transfrom.position + entity.transfrom.Forward, entity.transfrom.rotation, Vector2.One);
+			Instantiate.Create(new BulletEntity(), entity.transform.position + entity.transform.Forward, entity.transform.rotation, Vector2.One);
 		}
 
 		if(Input.GetKeyDown(KeyCode.SPACE)) {
@@ -56,8 +56,8 @@ public class PlayerScript : Script {
 	}
 
 	private void PrintPosition() {
-		Logger.Log("Player's Position: " + entity.transfrom.position.ToString());
-		Logger.Log("Player's Rotation: " + entity.transfrom.rotation);
+		Logger.Log("Player's Position: " + entity.transform.position.ToString());
+		Logger.Log("Player's Rotation: " + entity.transform.rotation);
 		Logger.Log(SceneManager.activeScene.entityList.Count.ToString());
 	}
 }

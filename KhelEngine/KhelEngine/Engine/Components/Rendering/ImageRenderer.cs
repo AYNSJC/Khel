@@ -40,9 +40,9 @@ public class ImageRenderer : Behaviour {
 	}
 
 	private void UpdateTransformAndColor() {
-		quadData.transform.position = entity.transfrom.position + positionOffset;
-		quadData.transform.rotation = entity.transfrom.rotation + rotationOffset;
-		quadData.transform.scale = new Vector2(scale.x * entity.transfrom.scale.x, scale.y * entity.transfrom.scale.y);
+		quadData.transform.position = entity.transform.position + positionOffset;
+		quadData.transform.rotation = entity.transform.rotation + rotationOffset;
+		quadData.transform.scale = new Vector2(scale.x * entity.transform.scale.x, scale.y * entity.transform.scale.y);
 		quadData.color = color;
 	}
 

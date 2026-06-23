@@ -2,8 +2,8 @@
 
 public class BulletEntity : Entity {
 	public BulletEntity() {
-		transfrom.position = Vector2.Zero;
-		transfrom.scale = Vector2.One;
+		transform.position = Vector2.Zero;
+		transform.scale = Vector2.One;
 
 		BulletScript bulletScript = (BulletScript)AddScript(new BulletScript());
 		bulletScript.speed = 10f;
@@ -12,7 +12,7 @@ public class BulletEntity : Entity {
 		AddBehaviour(new CircleCollider());
 
 		ImageRenderer imgRen = (ImageRenderer)AddBehaviour(new ImageRenderer());
-		imgRen.scale = new Vector2(0.5f, 0.5f);
-		imgRen.color = Color.Yellow;
+		imgRen.fullImagePath = "F:\\Code\\C#\\Khel\\Khel\\KhelEngine\\Example\\Graphics\\CrossAirDoor.png";
+		imgRen.scale = new Vector2(2f, 2f);
 	}
 }

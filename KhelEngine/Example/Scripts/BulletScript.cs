@@ -13,7 +13,7 @@
 	}
 
 	public override void Loop() {
-		entity.transfrom.position += entity.transfrom.Forward * (speed * Engine.deltaTime);
+		entity.transform.position += entity.transform.Forward * (speed * Engine.deltaTime);
 		DeleteAfterTime();
 	}
 
