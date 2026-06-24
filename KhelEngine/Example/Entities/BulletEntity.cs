@@ -13,6 +13,6 @@ public class BulletEntity : Entity {
 
 		ImageRenderer imgRen = (ImageRenderer)AddBehaviour(new ImageRenderer());
 		imgRen.fullImagePath = "F:\\Code\\C#\\Khel\\Khel\\KhelEngine\\Example\\Graphics\\Particle.png";
-		imgRen.scale = new Vector2(2f, 2f);
+		imgRen.scale = new Vector2(1f, 1f);
 	}
 }
