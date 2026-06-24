@@ -4,6 +4,8 @@ using System.Collections.Generic;
 public static class PhysicsManager {
 	private static List<Collider> _colliderList = new List<Collider>();
 
+	public static Vector2 gravitationForce = new Vector2(0f, -9.81f);
+
 	public static void Loop() {
 		for(int i = 0; i < _colliderList.Count; i++) {
 			for(int j = i + 1; j < _colliderList.Count; j++) {

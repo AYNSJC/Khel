@@ -58,7 +58,9 @@ public class OutputWindow {
 
 	private float aspect;
 
-	public OutputWindow(int width, int height, string title) {
+	private KhelEngine.Mathf.Vector4 _bgColor;
+
+	public OutputWindow(int width, int height, string title, KhelEngine.Mathf.Vector4 bgColor) {
 		RegisterWindowClass();
 
 		_width = width;
@@ -75,6 +77,8 @@ public class OutputWindow {
 		float worldWidth = worldHeight * aspect;
 
 		var _projection = Matrix4x4.CreateOrthographic(worldWidth, worldHeight, -1f, 1f);
+
+		_bgColor = bgColor;
 
 		CreateOpenGLContext();
 
@@ -184,7 +188,7 @@ public class OutputWindow {
 	}
 
 	public void Render() {
-		_gl.ClearColor(0f, 1f, 1f, 1f);
+		_gl.ClearColor(_bgColor.x, _bgColor.y, _bgColor.z, _bgColor.w);
 
 		_gl.Clear(ClearBufferMask.ColorBufferBit);
 

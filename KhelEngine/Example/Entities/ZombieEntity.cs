@@ -7,7 +7,8 @@ public class ZombieEntity : Entity {
 		transform.scale = Vector2.One;
 
 		AddBehaviour(new CircleCollider());
-		AddBehaviour(new Rigidbody());
+		Rigidbody rb = (Rigidbody)AddBehaviour(new Rigidbody());
+		rb.useGravity = false;
 
 		ImageRenderer imgRen = (ImageRenderer)AddBehaviour(new ImageRenderer());
 		imgRen.scale = Vector2.One;

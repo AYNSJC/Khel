@@ -9,7 +9,8 @@ public class PlayerEntity : Entity {
 		AddScript(new PlayerScript());
 
 		AddBehaviour(new CircleCollider());
-		AddBehaviour(new Rigidbody());
+		Rigidbody rb = (Rigidbody)AddBehaviour(new Rigidbody());
+		rb.useGravity = false;
 
 		ImageRenderer imgRen = (ImageRenderer)AddBehaviour(new ImageRenderer());
 		imgRen.scale = Vector2.One;

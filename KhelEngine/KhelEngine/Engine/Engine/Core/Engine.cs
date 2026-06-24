@@ -20,7 +20,7 @@ public static class Engine {
 	public static void StartGame(IProjectSettings pS) {
 		projectSettings = pS;
 
-		window = new OutputWindow(pS.Width, pS.Height, pS.ProjectName);
+		window = new OutputWindow(pS.Width, pS.Height, pS.ProjectName, pS.bgColor);
 
 		SceneManager.UpdateSceneList(pS.workingScenes);
 	}

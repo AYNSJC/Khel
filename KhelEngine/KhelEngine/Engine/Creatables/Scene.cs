@@ -22,6 +22,12 @@ public class Scene {
 
 	public virtual void FixedLoop() {
 		for(int i = 0; i < entityList.Count; i++) {
+			List<Behaviour> entitybehaviourList = entityList[i].behaviourList;
+
+			for(int j = 0; j < entitybehaviourList.Count; j++) {
+				entitybehaviourList[j].FixedLoop();
+			}
+
 			List<Script> entityScriptList = entityList[i].scriptList;
 
 			for(int j = 0; j < entityScriptList.Count; j++) {
