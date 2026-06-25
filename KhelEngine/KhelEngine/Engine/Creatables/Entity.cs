@@ -1,6 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using KhelEngine.Mathf;
+using System.Collections.Generic;
 
 public class Entity {
+	public Entity Parent;
+	public List<Entity> Children;
+
 	public Transform transform = new Transform();
 	public List<Behaviour> behaviourList = new List<Behaviour>();
 	public List<Script> scriptList = new List<Script>();
@@ -65,6 +69,10 @@ public class Entity {
 		}
 
 		return entityToReturn;
+	}
+
+	public Entity AddChild(Entity cEntity, Vector2 cPosition, float cRotation, Vector2 cScale) {
+		return Instantiate.Create(cEntity, cPosition, cRotation, cScale);
 	}
 
 	public void Setup() {
