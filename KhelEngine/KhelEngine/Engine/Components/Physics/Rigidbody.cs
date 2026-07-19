@@ -6,10 +6,14 @@ public class Rigidbody : Behaviour {
 	public bool isStatic = false;
 	public bool useGravity = true;
 
+	public Vector2 velocity;
+
 	public override void Loop() {
 		if(useGravity) {
-			entity.transform.position += PhysicsManager.gravitationForce * Engine.deltaTime;
+			velocity += PhysicsManager.gravitationForce;
 		}
+		
+		entity.transform.position += velocity * Engine.deltaTime;
 	}
 
 	public void Collided(Entity other, float combinedRadius) {
@@ -30,5 +34,9 @@ public class Rigidbody : Behaviour {
 				}
 			}
 		}
+	}
+
+	public void AddForce(Vector2 force) {
+		velocity += force;
 	}
 }
