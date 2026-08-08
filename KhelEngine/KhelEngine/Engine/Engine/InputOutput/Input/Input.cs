@@ -68,6 +68,36 @@ public static class Input {
         }
     }
 
+    public static bool MouseClickDown(int mouseClick, Entity entity) {
+        if(mouseClick == 0 && GetKeyDown(KeyCode.LEFT_MOUSE_BUTTON)) {
+            return MouseOverlapsCollider(entity);
+        }
+        else if(mouseClick == 1 && GetKeyDown(KeyCode.RIGHT_MOUSE_BUTTON)) {
+            return MouseOverlapsCollider(entity);
+        }
+        else if(mouseClick == 2 && GetKeyDown(KeyCode.MIDDLE_MOUSE_BUTTON)) {
+            return MouseOverlapsCollider(entity);
+        }
+        else {
+            return false;
+        }
+    }
+
+    public static bool MouseClickUp(int mouseClick, Entity entity) {
+        if(mouseClick == 0 && GetKeyUp(KeyCode.LEFT_MOUSE_BUTTON)) {
+            return MouseOverlapsCollider(entity);
+        }
+        else if(mouseClick == 1 && GetKeyUp(KeyCode.RIGHT_MOUSE_BUTTON)) {
+            return MouseOverlapsCollider(entity);
+        }
+        else if(mouseClick == 2 && GetKeyUp(KeyCode.MIDDLE_MOUSE_BUTTON)) {
+            return MouseOverlapsCollider(entity);
+        }
+        else {
+            return false;
+        }
+    }
+
     private static bool MouseOverlapsCollider(Entity entity) {
         if(entity.GetBehaviour<CircleCollider>() != null) {
             if(Vector2.Distance(entity.transform.position, GetMouseWorldPosition()) <= entity.GetBehaviour<CircleCollider>().radius) {
