@@ -12,7 +12,10 @@ public static class PhysicsManager {
 				if(_colliderList[i] is CircleCollider circleI && _colliderList[j] is CircleCollider circleJ) {
 					CircleCollision(circleI, circleJ);
 				}
-			}
+                else if(_colliderList[i] is BoxCollider boxI && _colliderList[j] is BoxCollider boxJ) {
+                    BoxCollision(boxI, boxJ);
+                }
+            }
 		}
 	}
 
@@ -47,4 +50,31 @@ public static class PhysicsManager {
 			}
 		}
 	}
+
+    private static void BoxCollision(BoxCollider i, BoxCollider j) {
+        bool colliding =
+            i.position().x - i.xSize / 2 <= j.position().x + j.xSize / 2 &&
+            i.position().x + i.xSize / 2 >= j.position().x - j.xSize / 2 &&
+            i.position().y - i.ySize / 2 <= j.position().y + j.ySize / 2 &&
+            i.position().y + i.ySize / 2 >= j.position().y - j.ySize / 2;
+
+        if(colliding) {
+            if(!i.wasInCollision || !j.wasInCollision) {
+                i.wasInCollision = true;
+                j.wasInCollision = true;
+
+                i.CollisionEntered(j);
+                j.CollisionEntered(i);
+            }
+        }
+        else {
+            if(i.wasInCollision || j.wasInCollision) {
+                i.wasInCollision = false;
+                j.wasInCollision = false;
+
+                i.CollisionExited(j);
+                j.CollisionExited(i);
+            }
+        }
+    }
 }
