@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-public static class EngineGameFixedLoopManager {
+﻿public static class EngineGameFixedLoopManager {
 	public static void UpdateGame() {
 		UpdateAllEntityFixedLoops();
 
