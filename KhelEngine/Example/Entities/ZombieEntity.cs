@@ -14,7 +14,7 @@ public class ZombieEntity : Entity {
 		imgRen.scale = Vector2.One;
 		imgRen.color = Color.Red;
 		imgRen.rotationOffset = 90f;
-		imgRen.fullImagePath = "F:\\Code\\C#\\Khel\\Khel\\KhelEngine\\Example\\Graphics\\hud_p1.png";
+		imgRen.fullImagePath = "D:\\Code\\C#\\Khel\\KhelEngine\\Example\\Graphics\\hud_p1.png";
 
 		AddScript(new ZombieScript());
 	}

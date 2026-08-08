@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Code\\C#\\Khel\\Khel\\KhelEngine\\KhelEngine.csproj": {}
+    "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine.csproj": {}
   },
   "projects": {
-    "F:\\Code\\C#\\Khel\\Khel\\KhelEngine\\KhelEngine.csproj": {
+    "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Code\\C#\\Khel\\Khel\\KhelEngine\\KhelEngine.csproj",
+        "projectUniqueName": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine.csproj",
         "projectName": "KhelEngine",
-        "projectPath": "F:\\Code\\C#\\Khel\\Khel\\KhelEngine\\KhelEngine.csproj",
-        "packagesPath": "C:\\Users\\AYNSJC\\.nuget\\packages\\",
-        "outputPath": "F:\\Code\\C#\\Khel\\Khel\\KhelEngine\\obj\\",
+        "projectPath": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "D:\\Code\\C#\\Khel\\KhelEngine\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\AYNSJC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -77,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

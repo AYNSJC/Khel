@@ -16,6 +16,6 @@ public class PlayerEntity : Entity {
 		imgRen.scale = Vector2.One;
 		imgRen.rotationOffset = 90f;
 		imgRen.color = Color.Green;
-		imgRen.fullImagePath = "F:\\Code\\C#\\Khel\\Khel\\KhelEngine\\Example\\Graphics\\hud_p1.png";
+		imgRen.fullImagePath = "D:\\Code\\C#\\Khel\\KhelEngine\\Example\\Graphics\\hud_p1.png";
 	}
 }
