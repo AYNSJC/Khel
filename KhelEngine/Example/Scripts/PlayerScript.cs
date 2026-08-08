@@ -50,7 +50,7 @@ public class PlayerScript : Script {
             Instantiate.Create(new BulletEntity(), entity.transform.position + entity.transform.Forward, entity.transform.rotation, Vector2.One);
         }
 
-        if(Input.MouseClick(0, this.entity)) {
+        if(Input.MouseClickDown(0, this.entity)) {
             PrintPosition();
         }
     }
