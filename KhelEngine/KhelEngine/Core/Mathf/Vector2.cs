@@ -33,7 +33,31 @@ namespace KhelEngine.Mathf {
 			return new Vector2(a.x / b, a.y / b);
 		}
 
-		public override string ToString() {
+        public static bool operator ==(Vector2 a, Vector2 b) {
+            return a.x == b.x && a.y == b.y;
+        }
+
+        public static bool operator !=(Vector2 a, Vector2 b) {
+            return !(a == b);
+        }
+
+		public static bool operator >(Vector2 a, Vector2 b) {
+			return a.SquareMagnitude() > b.SquareMagnitude();
+		}
+
+        public static bool operator <(Vector2 a, Vector2 b) {
+            return a.SquareMagnitude() < b.SquareMagnitude();
+        }
+
+        public static bool operator >=(Vector2 a, Vector2 b) {
+            return a.SquareMagnitude() >= b.SquareMagnitude();
+        }
+
+        public static bool operator <=(Vector2 a, Vector2 b) {
+            return a.SquareMagnitude() <= b.SquareMagnitude();
+        }
+
+        public override string ToString() {
 			return "(" + x + ", " + y + ")";
 		}
 

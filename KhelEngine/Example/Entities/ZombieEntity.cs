@@ -6,7 +6,7 @@ public class ZombieEntity : Entity {
 		transform.rotation = 15f;
 		transform.scale = Vector2.One;
 
-		AddBehaviour(new CircleCollider());
+		AddBehaviour(new BoxCollider());
 		Rigidbody rb = (Rigidbody)AddBehaviour(new Rigidbody());
 		rb.useGravity = false;
 

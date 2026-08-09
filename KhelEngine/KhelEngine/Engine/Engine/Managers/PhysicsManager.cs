@@ -1,4 +1,5 @@
 ﻿using KhelEngine.Mathf;
+using System;
 using System.Collections.Generic;
 
 public static class PhysicsManager {
@@ -52,19 +53,21 @@ public static class PhysicsManager {
 	}
 
     private static void BoxCollision(BoxCollider i, BoxCollider j) {
-        bool colliding =
-            i.position().x - i.xSize / 2 <= j.position().x + j.xSize / 2 &&
-            i.position().x + i.xSize / 2 >= j.position().x - j.xSize / 2 &&
-            i.position().y - i.ySize / 2 <= j.position().y + j.ySize / 2 &&
-            i.position().y + i.ySize / 2 >= j.position().y - j.ySize / 2;
+        float overlapX = (i.size.x / 2f + j.size.x / 2f) - MathF.Abs(i.entity.transform.position.x - j.entity.transform.position.x);
+        float overlapY = (i.size.y / 2f + j.size.y / 2f) - MathF.Abs(i.entity.transform.position.y - j.entity.transform.position.y);
 
-        if(colliding) {
+		Vector2 overlap = new Vector2(overlapX, overlapY);
+
+        if(overlap > Vector2.Zero) {
             if(!i.wasInCollision || !j.wasInCollision) {
                 i.wasInCollision = true;
                 j.wasInCollision = true;
 
                 i.CollisionEntered(j);
                 j.CollisionEntered(i);
+
+                i.entity.GetBehaviour<Rigidbody>()?.Collided(j.entity, Overlap: overlap.Magnitude());
+                j.entity.GetBehaviour<Rigidbody>()?.Collided(i.entity, Overlap: overlap.Magnitude());
             }
         }
         else {

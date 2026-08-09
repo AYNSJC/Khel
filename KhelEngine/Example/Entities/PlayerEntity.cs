@@ -8,7 +8,7 @@ public class PlayerEntity : Entity {
 
 		AddScript(new PlayerScript());
 
-		AddBehaviour(new CircleCollider());
+		AddBehaviour(new BoxCollider());
 		Rigidbody rb = (Rigidbody)AddBehaviour(new Rigidbody());
 		rb.useGravity = false;
 

@@ -16,10 +16,14 @@ public class Rigidbody : Behaviour {
 		entity.transform.position += velocity * Engine.deltaTime;
 	}
 
-	public void Collided(Entity other, float combinedRadius) {
+	public void Collided(Entity other, float combinedRadius = 0, float Overlap = 0) {
+		float overlap = Overlap;
 		Vector2 direction = entity.transform.position - other.transform.position;
-		float distance = direction.Magnitude();
-		float overlap = combinedRadius - distance;
+
+        if(overlap == 0) {
+			float distance = direction.Magnitude();
+			overlap = combinedRadius - distance;
+		}
 
 		if(overlap > 0f) {
 			Vector2 correction = direction.Normalized() * (overlap / 2f + precition);
