@@ -16,6 +16,9 @@ public static class PhysicsManager {
                 else if(_colliderList[i] is BoxCollider boxI && _colliderList[j] is BoxCollider boxJ) {
                     BoxCollision(boxI, boxJ);
                 }
+                else if(_colliderList[i] is CircleCollider circleI2 && _colliderList[j] is BoxCollider boxJ2) {
+                    CircleBoxCollision(circleI2, boxJ2);
+                }
             }
 		}
 	}
@@ -37,8 +40,8 @@ public static class PhysicsManager {
 				i.CollisionEntered(j);
 				j.CollisionEntered(i);
 
-				i.entity.GetBehaviour<Rigidbody>()?.Collided(j.entity, i.radius + j.radius);
-				j.entity.GetBehaviour<Rigidbody>()?.Collided(i.entity, i.radius + j.radius);
+				i.entity.GetBehaviour<Rigidbody>()?.CirclesCollided(j.entity, i.radius + j.radius);
+				j.entity.GetBehaviour<Rigidbody>()?.CirclesCollided(i.entity, i.radius + j.radius);
 			}
 		}
 		else {
@@ -58,7 +61,7 @@ public static class PhysicsManager {
 
 		Vector2 overlap = new Vector2(overlapX, overlapY);
 
-        if(overlap > Vector2.Zero) {
+        if(overlap.x > 0f && overlap.y > 0f) { 
             if(!i.wasInCollision || !j.wasInCollision) {
                 i.wasInCollision = true;
                 j.wasInCollision = true;
@@ -66,8 +69,8 @@ public static class PhysicsManager {
                 i.CollisionEntered(j);
                 j.CollisionEntered(i);
 
-                i.entity.GetBehaviour<Rigidbody>()?.Collided(j.entity, Overlap: overlap.Magnitude());
-                j.entity.GetBehaviour<Rigidbody>()?.Collided(i.entity, Overlap: overlap.Magnitude());
+                i.entity.GetBehaviour<Rigidbody>()?.BoxesCollided(j.entity, overlap);
+                j.entity.GetBehaviour<Rigidbody>()?.BoxesCollided(i.entity, overlap);
             }
         }
         else {
@@ -80,4 +83,8 @@ public static class PhysicsManager {
             }
         }
     }
+
+	private static void CircleBoxCollision(CircleCollider circleCollider, BoxCollider boxCollider) {
+
+	}
 }
