@@ -20,7 +20,7 @@ public class ImageRenderer : Behaviour {
 		UpdateTransformAndColor();
 
 		if(!string.IsNullOrEmpty(fullImagePath)) {
-			quadData.textureId = LoadTexture(fullImagePath);
+            quadData.textureId = LoadTexture(fullImagePath);
 			quadData.hasTexture = true;
 		}
 

@@ -41,7 +41,15 @@ namespace KhelEngine.Mathf {
             return !(a == b);
         }
 
-		public static bool operator >(Vector2 a, Vector2 b) {
+        public override bool Equals(object obj) {
+            return obj is Vector2 other && this == other;
+        }
+
+        public override int GetHashCode() {
+            return HashCode.Combine(x, y);
+        }
+
+        public static bool operator >(Vector2 a, Vector2 b) {
 			return a.SquareMagnitude() > b.SquareMagnitude();
 		}
 

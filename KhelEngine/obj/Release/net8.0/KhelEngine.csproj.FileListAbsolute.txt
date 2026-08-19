@@ -1,0 +1,14 @@
+D:\Code\C#\Khel\KhelEngine\bin\Release\net8.0\KhelEngine.dll.config
+D:\Code\C#\Khel\KhelEngine\bin\Release\net8.0\KhelEngine.deps.json
+D:\Code\C#\Khel\KhelEngine\bin\Release\net8.0\KhelEngine.dll
+D:\Code\C#\Khel\KhelEngine\bin\Release\net8.0\KhelEngine.pdb
+D:\Code\C#\Khel\KhelEngine\obj\Release\net8.0\KhelEngine.csproj.AssemblyReference.cache
+D:\Code\C#\Khel\KhelEngine\obj\Release\net8.0\KhelEngine.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\C#\Khel\KhelEngine\obj\Release\net8.0\KhelEngine.AssemblyInfoInputs.cache
+D:\Code\C#\Khel\KhelEngine\obj\Release\net8.0\KhelEngine.AssemblyInfo.cs
+D:\Code\C#\Khel\KhelEngine\obj\Release\net8.0\KhelEngine.csproj.CoreCompileInputs.cache
+D:\Code\C#\Khel\KhelEngine\obj\Release\net8.0\KhelEngine.sourcelink.json
+D:\Code\C#\Khel\KhelEngine\obj\Release\net8.0\KhelEngine.dll
+D:\Code\C#\Khel\KhelEngine\obj\Release\net8.0\refint\KhelEngine.dll
+D:\Code\C#\Khel\KhelEngine\obj\Release\net8.0\KhelEngine.pdb
+D:\Code\C#\Khel\KhelEngine\obj\Release\net8.0\ref\KhelEngine.dll
