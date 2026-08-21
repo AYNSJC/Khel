@@ -107,7 +107,17 @@ public static class Input {
                 return false;
             }
         }
-        else {
+		if(entity.GetBehaviour<BoxCollider>() != null) {
+            BoxCollider box = entity.GetBehaviour<BoxCollider>();
+			if(GetMouseWorldPosition().x < box.position().x + box.size.x && GetMouseWorldPosition().x > box.position().x - box.size.x &&
+				GetMouseWorldPosition().y < box.position().y + box.size.y && GetMouseWorldPosition().y > box.position().y - box.size.y) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+		else {
             return false;
         }
     }
