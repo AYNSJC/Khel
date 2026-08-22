@@ -1,5 +1,5 @@
 # Making a Game
-## Intializing 
+## Initializing 
 In your csproj make sure to add:
 ```csproj
 <ItemGroup>
@@ -12,7 +12,7 @@ In your csproj make sure to add:
 ```
 
 ### Make a scene
-To get started make a game scene, make a non static public class inherted form Scene & override the Setup() function
+To get started make a game scene, make a non static public class inherited form Scene & override the Setup() function
 Eg:
 ```csharp
 using KhelEngine.Mathf;
@@ -43,7 +43,7 @@ public class SampleProjectSettings : IProjectSettings {
 ```
 
 ### Create the game window
-Now we will need to write the program file which will excute our game
+Now we will need to write the program file which will execute our game
 Eg:
 ```csharp
 public static class Program {
