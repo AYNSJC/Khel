@@ -14,13 +14,12 @@ Eg:
 
 public class Player : Entity {
 
-&#x09;public Player() {
+    public Player() {
 
-&#x09;	AddBehaviour(Behaviour);
+        AddBehaviour(Behaviour);
 
-&#x09;	AddScript(Script);
-
-&#x09;}
+        AddScript(Script);
+    }
 
 }
 
