@@ -20,8 +20,7 @@ public class ImageRenderer : Behaviour {
 		UpdateTransformAndColor();
 
 		if(!string.IsNullOrEmpty(fullImagePath)) {
-            quadData.textureId = LoadTexture(fullImagePath);
-			quadData.hasTexture = true;
+			SetImage(fullImagePath);
 		}
 
 		Engine.window.AddQuad(quadData);
@@ -36,6 +35,20 @@ public class ImageRenderer : Behaviour {
 
 		if(quadData.hasTexture) {
 			Engine.window.gl.DeleteTexture(quadData.textureId);
+		}
+	}
+
+	public void SetImage(string path) {
+		if(quadData.hasTexture) {
+			Engine.window.gl.DeleteTexture(quadData.textureId);
+			quadData.hasTexture = false;
+		}
+
+		fullImagePath = path;
+
+		if(!string.IsNullOrEmpty(path)) {
+			quadData.textureId = LoadTexture(path);
+			quadData.hasTexture = true;
 		}
 	}
 
