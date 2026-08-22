@@ -98,6 +98,10 @@ public static class Input {
         }
     }
 
+    public static bool MouseOverlap(Entity entity) {
+        return MouseOverlapsCollider(entity);
+    }
+
     private static bool MouseOverlapsCollider(Entity entity) {
         if(entity.GetBehaviour<CircleCollider>() != null) {
             if(Vector2.Distance(entity.transform.position, GetMouseWorldPosition()) <= entity.GetBehaviour<CircleCollider>().radius) {
