@@ -30,6 +30,11 @@ namespace KhelEngine.Mathf {
 		}
 
 		public static Vector2 operator /(Vector2 a, float b) {
+			if(b == 0) {
+				Logger.Error("Can't divide by 0");
+				return Zero;
+			}
+
 			return new Vector2(a.x / b, a.y / b);
 		}
 

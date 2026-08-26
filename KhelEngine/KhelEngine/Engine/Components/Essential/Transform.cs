@@ -91,12 +91,15 @@ public class Transform : Behaviour {
 		if(Parent == parent)
 			return;
 
-		if(Parent != null)
+		if(Parent != null) {
 			Parent.transform.Children.Remove(entity);
+		}
+		else {
+			Logger.Error("Parent can't be null");
+			return;
+		}
 
 		Parent = parent;
-
-		if(Parent != null)
-			Parent.transform.Children.Add(entity);
+		Parent.transform.Children.Add(entity);
 	}
 }

@@ -9,4 +9,8 @@ public static class Logger {
 	public static void Log(string log) {
 		Console.WriteLine(log);
 	}
+
+	public static void Error(string err) {
+		Console.WriteLine("ERROR: " + err);
+	}
 }

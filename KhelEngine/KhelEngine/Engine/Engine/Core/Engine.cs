@@ -20,6 +20,12 @@ public static class Engine {
 	public static void StartGame(IProjectSettings pS) {
 		projectSettings = pS;
 
+		if(pS.Height == 0 || pS.Width == 0) {
+			Logger.Error("Window dimensions can't be 0");
+			
+			return;
+		}
+
 		window = new OutputWindow(pS.Width, pS.Height, pS.ProjectName, pS.bgColor);
 
 		Application.Initialize();

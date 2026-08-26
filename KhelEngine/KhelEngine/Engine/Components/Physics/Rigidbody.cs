@@ -14,7 +14,7 @@ public class Rigidbody : Behaviour {
         collider = entity.GetBehaviour<Collider>();
 
 		if(collider == null) {
-			Logger.Log("Error: can't find collider on entity: " + entity);
+			Logger.Error("Entity with Rigidbody() must have a collider");
 		}
     }
 
