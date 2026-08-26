@@ -22,6 +22,8 @@ public static class Engine {
 
 		window = new OutputWindow(pS.Width, pS.Height, pS.ProjectName, pS.bgColor);
 
+		Application.Initialize();
+
 		SceneManager.UpdateSceneList(pS.workingScenes);
 	}
 

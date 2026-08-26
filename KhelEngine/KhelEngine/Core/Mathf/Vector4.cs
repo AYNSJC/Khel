@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace KhelEngine.Mathf {
+﻿namespace KhelEngine.Mathf {
 	public struct Vector4 {
 		public float x;
 		public float y;

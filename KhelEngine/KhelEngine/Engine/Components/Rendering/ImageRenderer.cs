@@ -10,7 +10,7 @@ public class ImageRenderer : Behaviour {
 	public Vector2 scale = Vector2.One;
 	public Vector4 color = Vector4.One;
 
-	public string fullImagePath = "";
+	private string fullImagePath = "";
 
 	private QuadData quadData = new QuadData();
 
@@ -18,10 +18,6 @@ public class ImageRenderer : Behaviour {
 		quadData.transform = new Transform();
 
 		UpdateTransformAndColor();
-
-		if(!string.IsNullOrEmpty(fullImagePath)) {
-			SetImage(fullImagePath);
-		}
 
 		Engine.window.AddQuad(quadData);
 	}
@@ -52,6 +48,10 @@ public class ImageRenderer : Behaviour {
 		}
 	}
 
+	public string GetImagePath() {
+		return fullImagePath;
+	}
+
 	private void UpdateTransformAndColor() {
 		quadData.transform.position = entity.transform.position + positionOffset;
 		quadData.transform.rotation = entity.transform.rotation + rotationOffset;
@@ -65,6 +65,15 @@ public class ImageRenderer : Behaviour {
 		uint textureId = gl.GenTexture();
 		gl.ActiveTexture(TextureUnit.Texture0);
 		gl.BindTexture(TextureTarget.Texture2D, textureId);
+
+		if(!Path.IsPathRooted(fullImagePath)) {
+			path = Path.Combine(Application.projectPath, fullImagePath);
+		}
+
+		if(!File.Exists(path)) {
+			Logger.Log("ERROR: " + path + " does not exsist!");
+			return 0;
+		}
 
 		ImageResult image = ImageResult.FromMemory(File.ReadAllBytes(path), ColorComponents.RedGreenBlueAlpha);
 
