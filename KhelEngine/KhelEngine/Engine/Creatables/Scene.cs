@@ -36,5 +36,9 @@ public class Scene {
 		}
 	}
 
-	public virtual void Exit() { }
+	public virtual void Exit() {
+		for(int i = 0; i < entityList.Count; i++) {
+			Deinstantiate.Delete(entityList[i]);
+		}
+	}
 }

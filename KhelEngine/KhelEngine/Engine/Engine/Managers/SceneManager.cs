@@ -9,12 +9,12 @@ public static class SceneManager {
 	public static Scene activeScene;
 
 	public static Scene LoadScene(int index) {
-		ExitCurrentActiveScene();
-
 		if(index < 0 || index + 1 > sceneList.Count) {
 			Logger.Error("Scene index out of bounds");
 			return null;
 		}
+
+		ExitCurrentActiveScene(index);
 
 		activeScene = sceneList[index];
 
@@ -25,7 +25,7 @@ public static class SceneManager {
 		return activeScene;
 	}
 
-	private static void ExitCurrentActiveScene() {
+	private static void ExitCurrentActiveScene(int i) {
 		if(activeScene == null) return;
 
 		activeScene.Exit();

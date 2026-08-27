@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KhelEngine")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+42c31c7cf641d1f42b869c6e68d03484bff5a227")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac1bd3c3b84ff2fbe4586c8f61968e67c71f2fcd")]
 [assembly: System.Reflection.AssemblyProductAttribute("KhelEngine")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KhelEngine")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
