@@ -29,6 +29,7 @@ public static class SceneManager {
 		if(activeScene == null) return;
 
 		activeScene.Exit();
+		activeScene.DeleteAllEntities();
 		activeScene = null;
 	}
 

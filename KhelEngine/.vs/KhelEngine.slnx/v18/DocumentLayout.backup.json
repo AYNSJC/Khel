@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\Code\\C#\\Khel\\KhelEngine\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\code\\c#\\khel\\khelengine\\khelengine\\engine\\engine\\core\\engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:khelengine\\engine\\engine\\core\\engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\code\\c#\\khel\\khelengine\\khelengine\\engine\\creatables\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:khelengine\\engine\\creatables\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\code\\c#\\khel\\khelengine\\khelengine\\engine\\engine\\managers\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,16 +15,36 @@
       "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:khelengine\\engine\\engine\\managers\\physicsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\code\\c#\\khel\\khelengine\\khelengine.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:khelengine.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\code\\c#\\khel\\khelengine\\khelengine\\engine\\engine\\core\\physics\\collider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:khelengine\\engine\\engine\\core\\physics\\collider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\code\\c#\\khel\\khelengine\\khelengine\\engine\\components\\physics\\rigidbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:khelengine\\engine\\components\\physics\\rigidbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\code\\c#\\khel\\khelengine\\khelengine\\engine\\components\\physics\\circlecollider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:khelengine\\engine\\components\\physics\\circlecollider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\code\\c#\\khel\\khelengine\\khelengine\\engine\\components\\physics\\boxcollider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:khelengine\\engine\\components\\physics\\boxcollider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\code\\c#\\khel\\khelengine\\khelengine\\engine\\engine\\core\\engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:khelengine\\engine\\engine\\core\\engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\code\\c#\\khel\\khelengine\\khelengine\\engine\\components\\essential\\transform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:khelengine\\engine\\components\\essential\\transform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\code\\c#\\khel\\khelengine\\khelengine\\engine\\engine\\editor\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:khelengine\\engine\\engine\\editor\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\code\\c#\\khel\\khelengine\\khelengine\\engine\\components\\physics\\rigidbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:khelengine\\engine\\components\\physics\\rigidbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\code\\c#\\khel\\khelengine\\khelengine\\core\\mathf\\vector2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,24 +83,12 @@
       "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:khelengine\\engine\\engine\\inputoutput\\input\\keycode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\code\\c#\\khel\\khelengine\\khelengine\\engine\\components\\physics\\circlecollider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:khelengine\\engine\\components\\physics\\circlecollider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\code\\c#\\khel\\khelengine\\khelengine\\engine\\creatables\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:khelengine\\engine\\creatables\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\code\\c#\\khel\\khelengine\\khelengine\\engine\\engine\\core\\renderer\\quad\\quaddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:khelengine\\engine\\engine\\core\\renderer\\quad\\quaddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\code\\c#\\khel\\khelengine\\khelengine\\engine\\components\\physics\\boxcollider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:khelengine\\engine\\components\\physics\\boxcollider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\code\\c#\\khel\\khelengine\\khelengine\\engine\\engine\\core\\physics\\collider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:khelengine\\engine\\engine\\core\\physics\\collider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\code\\c#\\khel\\khelengine\\khelengine\\engine\\engine\\core\\renderer\\quad\\quadrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -111,10 +119,6 @@
       "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:khelengine\\engine\\engine\\projectsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\code\\c#\\khel\\khelengine\\khelengine\\engine\\creatables\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:khelengine\\engine\\creatables\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\code\\c#\\khel\\khelengine\\khelengine\\engine\\components\\script.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:khelengine\\engine\\components\\script.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -142,11 +146,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 26,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "Input.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Engine\\InputOutput\\Input\\Input.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Engine\\InputOutput\\Input\\Input.cs",
@@ -155,12 +159,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-23T10:00:55.863Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "Engine.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Engine\\Core\\Engine.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Engine\\Core\\Engine.cs",
@@ -180,7 +183,7 @@
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Engine\\Managers\\SceneManager.cs",
               "ToolTip": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Engine\\Managers\\SceneManager.cs",
               "RelativeToolTip": "KhelEngine\\Engine\\Engine\\Managers\\SceneManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAIwB4AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-25T08:56:56.893Z",
               "IsPinned": true,
@@ -188,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "OutputWindow.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Engine\\InputOutput\\Output\\OutputWindow.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Engine\\InputOutput\\Output\\OutputWindow.cs",
@@ -201,7 +204,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "ImageRenderer.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Components\\Rendering\\ImageRenderer.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Components\\Rendering\\ImageRenderer.cs",
@@ -210,8 +213,7 @@
               "ViewState": "AgIAAD8AAAAAAAAAAAAkwFoAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-11T08:38:42.395Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -221,7 +223,7 @@
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Engine\\Managers\\PhysicsManager.cs",
               "ToolTip": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Engine\\Managers\\PhysicsManager.cs",
               "RelativeToolTip": "KhelEngine\\Engine\\Engine\\Managers\\PhysicsManager.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAewFQAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAewEQAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-25T05:21:10.321Z",
               "IsPinned": true,
@@ -229,7 +231,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
+              "Title": "KhelEngine",
+              "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine.csproj",
+              "RelativeDocumentMoniker": "KhelEngine.csproj",
+              "ToolTip": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine.csproj",
+              "RelativeToolTip": "KhelEngine.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-08-27T11:28:33.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "Application.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Engine\\Core\\Application.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Engine\\Core\\Application.cs",
@@ -237,12 +256,11 @@
               "RelativeToolTip": "KhelEngine\\Engine\\Engine\\Core\\Application.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-26T07:43:50.703Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-26T07:43:50.703Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "Shapes.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Engine\\Core\\Renderer\\Utilities\\Shapes.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Engine\\Core\\Renderer\\Utilities\\Shapes.cs",
@@ -250,12 +268,7 @@
               "RelativeToolTip": "KhelEngine\\Engine\\Engine\\Core\\Renderer\\Utilities\\Shapes.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-26T07:17:06.012Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "WhenOpened": "2026-08-26T07:17:06.012Z"
             },
             {
               "$type": "Document",
@@ -265,14 +278,14 @@
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Components\\Physics\\Rigidbody.cs",
               "ToolTip": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Components\\Physics\\Rigidbody.cs",
               "RelativeToolTip": "KhelEngine\\Engine\\Components\\Physics\\Rigidbody.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAIwCUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-20T13:40:29.084Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 7,
               "Title": "BoxCollider.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Components\\Physics\\BoxCollider.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Components\\Physics\\BoxCollider.cs",
@@ -280,11 +293,12 @@
               "RelativeToolTip": "KhelEngine\\Engine\\Components\\Physics\\BoxCollider.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-08T09:18:20.367Z"
+              "WhenOpened": "2026-08-08T09:18:20.367Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "Entity.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Creatables\\Entity.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Creatables\\Entity.cs",
@@ -296,7 +310,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "Transform.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Components\\Essential\\Transform.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Components\\Essential\\Transform.cs",
@@ -304,12 +318,11 @@
               "RelativeToolTip": "KhelEngine\\Engine\\Components\\Essential\\Transform.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAcwGIAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T09:59:36.194Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-22T09:59:36.194Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "Vector2.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Core\\Mathf\\Vector2.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Core\\Mathf\\Vector2.cs",
@@ -317,24 +330,24 @@
               "RelativeToolTip": "KhelEngine\\Core\\Mathf\\Vector2.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAywCEAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T09:44:27.549Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-22T09:44:27.549Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 4,
               "Title": "Collider.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Engine\\Core\\Physics\\Collider.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Engine\\Core\\Physics\\Collider.cs",
               "ToolTip": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Engine\\Core\\Physics\\Collider.cs",
               "RelativeToolTip": "KhelEngine\\Engine\\Engine\\Core\\Physics\\Collider.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAYwAsAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAzwBMAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-25T05:12:29.922Z"
+              "WhenOpened": "2026-05-25T05:12:29.922Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 6,
               "Title": "CircleCollider.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Components\\Physics\\CircleCollider.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Components\\Physics\\CircleCollider.cs",
@@ -342,11 +355,12 @@
               "RelativeToolTip": "KhelEngine\\Engine\\Components\\Physics\\CircleCollider.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-25T05:17:03.638Z"
+              "WhenOpened": "2026-05-25T05:17:03.638Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "Deinstantiate.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Engine\\ObjectManipulators\\Deinstantiate.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Engine\\ObjectManipulators\\Deinstantiate.cs",
@@ -358,7 +372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "Instantiate.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Engine\\ObjectManipulators\\Instantiate.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Engine\\ObjectManipulators\\Instantiate.cs",
@@ -370,7 +384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "Color.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Engine\\Core\\Renderer\\Utilities\\Color.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Engine\\Core\\Renderer\\Utilities\\Color.cs",
@@ -378,12 +392,11 @@
               "RelativeToolTip": "KhelEngine\\Engine\\Engine\\Core\\Renderer\\Utilities\\Color.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T08:42:03.714Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T08:42:03.714Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "QuadData.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Engine\\Core\\Renderer\\Quad\\QuadData.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Engine\\Core\\Renderer\\Quad\\QuadData.cs",
@@ -395,7 +408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "Vector4.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Core\\Mathf\\Vector4.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Core\\Mathf\\Vector4.cs",
@@ -403,12 +416,11 @@
               "RelativeToolTip": "KhelEngine\\Core\\Mathf\\Vector4.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T08:16:42.693Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T08:16:42.693Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "QuadRenderer.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Engine\\Core\\Renderer\\Quad\\QuadRenderer.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Engine\\Core\\Renderer\\Quad\\QuadRenderer.cs",
@@ -420,7 +432,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "PIXELFORMATDESCRIPTOR.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Engine\\Core\\Renderer\\PIXELFORMATDESCRIPTOR.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Engine\\Core\\Renderer\\PIXELFORMATDESCRIPTOR.cs",
@@ -432,7 +444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "ProjectSettings.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Engine\\ProjectSettings.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Engine\\ProjectSettings.cs",
@@ -444,7 +456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "Angle.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Core\\Mathf\\Angle.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Core\\Mathf\\Angle.cs",
@@ -456,19 +468,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 0,
               "Title": "Scene.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Creatables\\Scene.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Creatables\\Scene.cs",
               "ToolTip": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Creatables\\Scene.cs",
               "RelativeToolTip": "KhelEngine\\Engine\\Creatables\\Scene.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAqwBsAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAYwCgAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-25T08:51:53.292Z"
+              "WhenOpened": "2026-04-25T08:51:53.292Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "InputBackend.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Engine\\InputOutput\\Input\\InputBackend.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Engine\\InputOutput\\Input\\InputBackend.cs",
@@ -476,12 +489,11 @@
               "RelativeToolTip": "KhelEngine\\Engine\\Engine\\InputOutput\\Input\\InputBackend.cs",
               "ViewState": "AgIAAKMAAAAAAAAAAAA8wK4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-25T07:23:47.868Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-25T07:23:47.868Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "KeyCode.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Engine\\InputOutput\\Input\\KeyCode.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Engine\\InputOutput\\Input\\KeyCode.cs",
@@ -489,12 +501,11 @@
               "RelativeToolTip": "KhelEngine\\Engine\\Engine\\InputOutput\\Input\\KeyCode.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-25T06:53:50.584Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-25T06:53:50.584Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "Behaviour.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Components\\Behaviour.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Components\\Behaviour.cs",
@@ -506,7 +517,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "EngineGameLoopManager.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Engine\\Managers\\EngineGameLoopManager.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Engine\\Managers\\EngineGameLoopManager.cs",
@@ -518,7 +529,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "EngineGameFixedLoopManager.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Engine\\Managers\\EngineGameFixedLoopManager.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Engine\\Managers\\EngineGameFixedLoopManager.cs",
@@ -530,7 +541,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "Logger.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Engine\\Editor\\Logger.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Engine\\Editor\\Logger.cs",
@@ -538,12 +549,11 @@
               "RelativeToolTip": "KhelEngine\\Engine\\Engine\\Editor\\Logger.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T08:47:59.699Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-23T08:47:59.699Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "ObjectManipulator.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Engine\\ObjectManipulators\\ObjectManipulator.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Engine\\ObjectManipulators\\ObjectManipulator.cs",
@@ -555,7 +565,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "Script.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Components\\Script.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Components\\Script.cs",
