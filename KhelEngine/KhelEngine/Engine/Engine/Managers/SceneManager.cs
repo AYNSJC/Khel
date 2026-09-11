@@ -28,8 +28,8 @@ public static class SceneManager {
 	private static void ExitCurrentActiveScene(int i) {
 		if(activeScene == null) return;
 
-		activeScene.Exit();
 		activeScene.DeleteAllEntities();
+		activeScene.Exit();
 		activeScene = null;
 	}
 
