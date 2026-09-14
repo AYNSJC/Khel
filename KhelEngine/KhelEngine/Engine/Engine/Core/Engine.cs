@@ -33,6 +33,8 @@ public static class Engine
 
     window = new OutputWindow(pS.Width, pS.Height, pS.ProjectName, pS.bgColor);
 
+    timeScale = 1f;
+
     Application.Initialize();
 
     SceneManager.UpdateSceneList(pS.workingScenes);
@@ -61,14 +63,6 @@ public static class Engine
 
   private static void RunFixedLoop()
   {
-    long currentTime = stopwatch.ElapsedMilliseconds;
-    float realTimeElapsed = (currentTime - lastElapsedTime) / 1000f;
-    lastElapsedTime = currentTime;
-
-    deltaTime = realTimeElapsed * timeScale;
-
-    fixedTimer += deltaTime;
-
     while (fixedTimer >= fixedStep)
     {
       EngineGameFixedLoopManager.UpdateGame();

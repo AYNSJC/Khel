@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\Code\\C#\\Khel\\KhelEngine\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\code\\c#\\khel\\khelengine\\khelengine\\engine\\engine\\managers\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:khelengine\\engine\\engine\\managers\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\code\\c#\\khel\\khelengine\\khelengine\\core\\mathf\\vector4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:khelengine\\core\\mathf\\vector4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\code\\c#\\khel\\khelengine\\khelengine\\core\\mathf\\vector2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:khelengine\\core\\mathf\\vector2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\code\\c#\\khel\\khelengine\\khelengine\\engine\\engine\\managers\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|solutionrelative:khelengine\\engine\\engine\\managers\\scenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CDBA4FA3-AA4E-476B-B546-42022160D95B}|KhelEngine.csproj|d:\\code\\c#\\khel\\khelengine\\khelengine\\engine\\creatables\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -146,7 +146,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 21,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -176,13 +176,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "SceneManager.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Engine\\Managers\\SceneManager.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Engine\\Engine\\Managers\\SceneManager.cs",
               "ToolTip": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Engine\\Engine\\Managers\\SceneManager.cs",
               "RelativeToolTip": "KhelEngine\\Engine\\Engine\\Managers\\SceneManager.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAIwB8AAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAIwB4AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-25T08:56:56.893Z",
               "IsPinned": true,
@@ -317,7 +317,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Vector2.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Core\\Mathf\\Vector2.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Core\\Mathf\\Vector2.cs",
@@ -325,8 +325,7 @@
               "RelativeToolTip": "KhelEngine\\Core\\Mathf\\Vector2.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T09:44:27.549Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-22T09:44:27.549Z"
             },
             {
               "$type": "Document",
@@ -402,7 +401,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Vector4.cs",
               "DocumentMoniker": "D:\\Code\\C#\\Khel\\KhelEngine\\KhelEngine\\Core\\Mathf\\Vector4.cs",
               "RelativeDocumentMoniker": "KhelEngine\\Core\\Mathf\\Vector4.cs",
