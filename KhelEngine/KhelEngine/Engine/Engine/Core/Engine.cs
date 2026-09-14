@@ -26,7 +26,7 @@ public static class Engine
 
     if (pS.Height == 0 || pS.Width == 0)
     {
-      Logger.Error("Window dimensions can't be 0");
+      Logger.LogError("Window dimensions can't be 0");
 
       return;
     }

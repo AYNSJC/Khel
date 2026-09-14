@@ -4,94 +4,109 @@ using StbImageSharp;
 using KhelEngine.Mathf;
 using System.IO;
 
-public class ImageRenderer : Behaviour {
-	public Vector2 positionOffset = Vector2.Zero;
-	public float rotationOffset = 0f;
-	public Vector2 scale = Vector2.One;
-	public Vector4 color = Vector4.One;
+public class ImageRenderer : Behaviour
+{
+  public Vector2 positionOffset = Vector2.Zero;
+  public float rotationOffset = 0f;
+  public Vector2 scale = Vector2.One;
+  public Vector4 color = Vector4.One;
 
-	private string fullImagePath = "";
+  private string fullImagePath = "";
 
-	private QuadData quadData = new QuadData();
+  private QuadData quadData = new QuadData();
 
-	public override void Enter() {
-		quadData.transform = new Transform();
+  public override void Enter()
+  {
+    quadData.transform = new Transform();
 
-		UpdateTransformAndColor();
+    UpdateTransformAndColor();
 
-		Engine.window.AddQuad(quadData);
-	}
+    Engine.window.AddQuad(quadData);
+  }
 
-	public override void Loop() {
-		UpdateTransformAndColor();
-	}
+  public override void Loop()
+  {
+    UpdateTransformAndColor();
+  }
 
-	public override void Exit() {
-		Engine.window.RemoveQuad(quadData);
+  public override void Exit()
+  {
+    Engine.window.RemoveQuad(quadData);
 
-		if(quadData.hasTexture) {
-			Engine.window.gl.DeleteTexture(quadData.textureId);
-		}
-	}
+    if (quadData.hasTexture)
+    {
+      Engine.window.gl.DeleteTexture(quadData.textureId);
+    }
+  }
 
-	public void SetImage(string path) {
-		if(quadData.hasTexture) {
-			Engine.window.gl.DeleteTexture(quadData.textureId);
-			quadData.hasTexture = false;
-		}
+  public void SetImage(string path)
+  {
+    if (quadData.hasTexture)
+    {
+      Engine.window.gl.DeleteTexture(quadData.textureId);
+      quadData.hasTexture = false;
+    }
 
-		fullImagePath = path;
+    fullImagePath = path;
 
-		if(!string.IsNullOrEmpty(path)) {
-			quadData.textureId = LoadTexture(path);
-			quadData.hasTexture = true;
-		}
-	}
+    if (!string.IsNullOrEmpty(path))
+    {
+      quadData.textureId = LoadTexture(path);
+      quadData.hasTexture = true;
+    }
+  }
 
-	public string GetImagePath() {
-		return fullImagePath;
-	}
+  public string GetImagePath()
+  {
+    return fullImagePath;
+  }
 
-	private void UpdateTransformAndColor() {
-		quadData.transform.position = entity.transform.position + positionOffset;
-		quadData.transform.rotation = entity.transform.rotation + rotationOffset;
-		quadData.transform.scale = new Vector2(scale.x * entity.transform.scale.x, scale.y * entity.transform.scale.y);
-		quadData.color = color;
-	}
+  private void UpdateTransformAndColor()
+  {
+    quadData.transform.position = entity.transform.position + positionOffset;
+    quadData.transform.rotation = entity.transform.rotation + rotationOffset;
+    quadData.transform.scale = new Vector2(scale.x * entity.transform.scale.x, scale.y * entity.transform.scale.y);
+    quadData.color = color;
+  }
 
-	private uint LoadTexture(string path) {
-		GL gl = Engine.window.gl;
+  private uint LoadTexture(string path)
+  {
+    GL gl = Engine.window.gl;
 
-		uint textureId = gl.GenTexture();
-		gl.ActiveTexture(TextureUnit.Texture0);
-		gl.BindTexture(TextureTarget.Texture2D, textureId);
+    uint textureId = gl.GenTexture();
+    gl.ActiveTexture(TextureUnit.Texture0);
+    gl.BindTexture(TextureTarget.Texture2D, textureId);
 
-		if(!Path.IsPathRooted(fullImagePath)) {
-			path = Path.Combine(Application.projectPath, fullImagePath);
-		}
+    if (!Path.IsPathRooted(fullImagePath))
+    {
+      path = Path.Combine(Application.projectPath, fullImagePath);
+    }
 
-		if(!File.Exists(path)) {
-			Logger.Error(path + " does not exsist!");
-			return 0;
-		}
+    if (!File.Exists(path))
+    {
+      Logger.LogError(path + " does not exsist!");
+      return 0;
+    }
 
-		try {
-			ImageResult image = ImageResult.FromMemory(File.ReadAllBytes(path), ColorComponents.RedGreenBlueAlpha);
+    try
+    {
+      ImageResult image = ImageResult.FromMemory(File.ReadAllBytes(path), ColorComponents.RedGreenBlueAlpha);
 
-			gl.TexImage2D(TextureTarget.Texture2D, 0, InternalFormat.Rgba, (uint)image.Width, (uint)image.Height, 0, PixelFormat.Rgba, PixelType.UnsignedByte, (ReadOnlySpan<byte>)image.Data);
+      gl.TexImage2D(TextureTarget.Texture2D, 0, InternalFormat.Rgba, (uint)image.Width, (uint)image.Height, 0, PixelFormat.Rgba, PixelType.UnsignedByte, (ReadOnlySpan<byte>)image.Data);
 
-			gl.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureWrapS, (int)GLEnum.ClampToEdge);
-			gl.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureWrapT, (int)GLEnum.ClampToEdge);
-			gl.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, (int)GLEnum.Linear);
-			gl.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, (int)GLEnum.Linear);
+      gl.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureWrapS, (int)GLEnum.ClampToEdge);
+      gl.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureWrapT, (int)GLEnum.ClampToEdge);
+      gl.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, (int)GLEnum.Linear);
+      gl.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, (int)GLEnum.Linear);
 
-			gl.BindTexture(TextureTarget.Texture2D, 0);
+      gl.BindTexture(TextureTarget.Texture2D, 0);
 
-			return textureId;
-		}
-		catch(Exception e) {
-			Logger.Error(e.ToString());
-			return 0;
-		}
-	}
+      return textureId;
+    }
+    catch (Exception e)
+    {
+      Logger.LogError(e.ToString());
+      return 0;
+    }
+  }
 }
